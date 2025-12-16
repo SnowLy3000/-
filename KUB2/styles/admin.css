@@ -1,0 +1,348 @@
+/* --- Стили для Админ-панели --- */
+
+.admin-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px; /* Отступ для фиксированного хедера */
+    padding-left: 0;
+}
+
+.content-area {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* Стили для структуры Редактора Инструкций */
+.editor-sub-container {
+    display: flex;
+    gap: 20px;
+    min-height: 500px;
+}
+
+.groups-sidebar {
+    width: 300px;
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--box-shadow-color);
+    flex-shrink: 0;
+}
+
+.groups {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.group {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.1s, border-color 0.1s;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.group:hover {
+    background-color: var(--hover-color);
+}
+
+.group.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.group-actions .btn.small {
+    padding: 4px 8px;
+    font-size: 0.75em;
+    margin-left: 5px;
+}
+
+.subtopics-area {
+    flex-grow: 1;
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--box-shadow-color);
+}
+
+.subtopics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.subtopic-card {
+    background-color: var(--background-color);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtopic-card:hover {
+    border-color: var(--primary-color);
+}
+
+.subtopic-actions .btn.small {
+    padding: 4px 8px;
+    font-size: 0.75em;
+    margin-left: 5px;
+}
+
+/* --- Стили для Quill Editor --- */
+
+.modal.large-modal .modal-content {
+    max-width: 900px;
+    width: 90%;
+}
+
+/* Переопределение стилей Quill для соответствия теме */
+.ql-toolbar {
+    background-color: var(--hover-color);
+    border-color: var(--border-color) !important;
+    color: var(--text-color);
+}
+
+.ql-container {
+    border-color: var(--border-color) !important;
+}
+
+.ql-editor {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.ql-snow .ql-stroke {
+    stroke: var(--text-color);
+}
+
+.ql-snow .ql-fill {
+    fill: var(--text-color);
+}
+
+.ql-snow .ql-picker-label {
+    color: var(--text-color);
+}
+
+.ql-snow .ql-active .ql-stroke {
+    stroke: var(--primary-color);
+}
+
+.ql-snow .ql-active .ql-fill {
+    fill: var(--primary-color);
+}
+
+/* --- Стили для Таблиц Данных --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--card-background);
+    box-shadow: 0 2px 10px var(--box-shadow-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--hover-color);
+}
+
+/* Статус роли админа */
+.admin-role {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.admin-role.main {
+    background-color: gold;
+    color: #333;
+}
+.admin-role.regular {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Фильтры и настройки */
+.filter-controls, .settings-form-group {
+    padding: 15px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-controls input[type="date"], 
+.filter-controls select,
+.settings-form-group input[type="number"] {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+/* --- Стили для Редактора Тем (Theme Editor Modal) --- (Запрос 3) */
+
+#themePalette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.theme-card {
+    cursor: pointer;
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    text-align: center;
+    transition: all 0.2s;
+    position: relative;
+    background-color: var(--card-background);
+}
+
+.theme-card:hover {
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.theme-card.selected {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.theme-preview {
+    width: 100%;
+    height: 80px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: grid;
+    grid-template-areas: "sidebar header" "sidebar content";
+    grid-template-columns: 30% 70%;
+    overflow: hidden;
+}
+
+/* Временные переменные для предпросмотра, основанные на классах темы */
+.theme-card.theme-soft-white .header-preview,
+.theme-card.theme-eco-beige .header-preview,
+.theme-card.theme-charcoal-dark .header-preview,
+.theme-card.theme-forest-velvet .header-preview {
+    background-color: var(--primary-color);
+}
+
+.theme-card.theme-soft-white .sidebar-preview,
+.theme-card.theme-eco-beige .sidebar-preview,
+.theme-card.theme-charcoal-dark .sidebar-preview,
+.theme-card.theme-forest-velvet .sidebar-preview {
+    background-color: var(--card-background);
+    border-right: 1px solid var(--border-color);
+}
+
+.theme-card.theme-soft-white .content-preview,
+.theme-card.theme-eco-beige .content-preview,
+.theme-card.theme-charcoal-dark .content-preview,
+.theme-card.theme-forest-velvet .content-preview {
+    background-color: var(--background-color);
+}
+
+
+.current-label {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--toast-success);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+/* Стили для таблицы результатов (Запрос 2) */
+.percentage-cell.pass {
+    color: var(--toast-success);
+    font-weight: bold;
+}
+
+.percentage-cell.warning {
+    color: orange;
+    font-weight: bold;
+}
+
+.percentage-cell.fail {
+    color: var(--toast-error);
+    font-weight: bold;
+}
+
+/* --- АДАПТИВНОСТЬ ДЛЯ АДМИНКИ --- */
+@media (max-width: 992px) {
+    .content {
+        margin-left: 0; 
+    }
+    
+    .groups-sidebar {
+        width: 100%;
+    }
+    
+    .editor-sub-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .groups-sidebar, .subtopics-area {
+        width: 100%;
+    }
+    
+    .groups-sidebar h3, .subtopics-area h3 {
+        display: block; 
+    }
+    
+    .data-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap; 
+    }
+    
+    .data-table thead, .data-table tbody, .data-table th, .data-table td, .data-table tr {
+        display: block;
+    }
+}
