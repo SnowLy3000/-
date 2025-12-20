@@ -1,0 +1,32 @@
+:root{
+  /* 🌞 LIGHT */
+  --bg:#F4F6FA;
+  --card:rgba(255,255,255,.92);
+  --text:#0B0E14;
+  --muted:#5f6b7a;
+  --field-bg:#ffffff;
+  --field-border:#d9dee6;
+  --accent:#00CFEA;
+}
+
+body[data-theme="dark"]{
+  /* 🌙 DARK */
+  --bg:#0B0E14;
+  --card:rgba(255,255,255,.06);
+  --text:#EAF2FF;
+  --muted:rgba(234,242,255,.65);
+  --field-bg:rgba(255,255,255,.10);
+  --field-border:rgba(255,255,255,.18);
+  --accent:#00F0FF;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:var(--bg);
+  color:var(--text);
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  transition:background .35s ease,color .35s ease;
+}

@@ -1,0 +1,295 @@
+[18-Dec-2025 10:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 11:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 12:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 13:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 14:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 15:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 16:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 17:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 18:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 19:00:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 20:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 21:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 22:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[18-Dec-2025 23:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 00:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 01:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 02:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 03:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 04:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 05:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 06:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 07:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 08:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 09:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 10:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 11:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 12:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 13:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 14:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 15:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 16:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 17:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 18:00:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 19:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 20:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 21:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 22:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[19-Dec-2025 23:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 00:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 01:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 02:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 03:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 04:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 05:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 06:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 07:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 08:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 09:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 10:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 11:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 12:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 13:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 14:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 15:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 16:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 17:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 18:00:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 19:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
+[20-Dec-2025 20:00:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.created_at' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php:9
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php(9): PDO->query()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cron/remind_unread_knowledge.php on line 9
