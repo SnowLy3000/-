@@ -1,0 +1,4 @@
+[28-Dec-2025 17:50:03 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function require_role() in /home/oizsopkxtv/kubinfo.live/admin/actions/branch_save.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/actions/branch_save.php on line 7

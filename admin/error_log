@@ -1,0 +1,543 @@
+[21-Dec-2025 15:35:07 UTC] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/admin/../includes/router.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 6
+[21-Dec-2025 15:35:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/admin/../includes/router.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 6
+[21-Dec-2025 15:35:10 UTC] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/admin/../includes/router.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 6
+[21-Dec-2025 15:35:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/admin/../includes/router.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 6
+[22-Dec-2025 11:31:38 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 22
+[22-Dec-2025 11:31:53 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 22
+[22-Dec-2025 11:41:53 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 19
+[22-Dec-2025 11:42:03 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 19
+[22-Dec-2025 11:42:14 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 19
+[22-Dec-2025 11:42:19 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 19
+[22-Dec-2025 11:48:55 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 19
+[22-Dec-2025 11:48:59 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 19
+[22-Dec-2025 11:49:18 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 19
+[22-Dec-2025 11:52:44 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 18
+[22-Dec-2025 11:53:06 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 18
+[22-Dec-2025 11:53:11 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 18
+[22-Dec-2025 11:53:23 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 18
+[22-Dec-2025 11:53:26 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 18
+[26-Dec-2025 10:10:44 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'key' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php:37
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php(37): PDO->query()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php on line 37
+[26-Dec-2025 10:10:47 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'key' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php:37
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php(37): PDO->query()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php on line 37
+[26-Dec-2025 10:23:12 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'key' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php:37
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php(37): PDO->query()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php on line 37
+[26-Dec-2025 10:24:22 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'key' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php:37
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php(37): PDO->query()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php on line 37
+[26-Dec-2025 09:33:39 UTC] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 1
+[26-Dec-2025 09:33:41 UTC] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 1
+[26-Dec-2025 09:33:50 UTC] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 1
+[26-Dec-2025 09:34:12 UTC] PHP Parse error:  syntax error, unexpected token "else", expecting end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 1
+[28-Dec-2025 09:41:25 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 44
+[28-Dec-2025 10:40:49 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/products.php:84
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/products.php on line 84
+[28-Dec-2025 10:41:16 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/products.php:84
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/products.php on line 84
+[28-Dec-2025 09:37:43 UTC] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/import.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 09:37:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/import.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 09:38:55 UTC] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/import.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 09:38:55 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/import.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 09:40:22 UTC] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/import.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 09:40:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/import.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 11:48:27 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 23
+[28-Dec-2025 11:48:30 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Часы детские' for key 'uniq_name' in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php:18
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php(18): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 18
+[28-Dec-2025 11:48:32 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Часы детские' for key 'uniq_name' in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php:18
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php(18): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 18
+[28-Dec-2025 11:48:35 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php:65
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 65
+[28-Dec-2025 11:50:39 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 30
+[28-Dec-2025 11:51:11 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 30
+[28-Dec-2025 11:51:27 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Стекла' for key 'uniq_name' in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php:25
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php(25): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 25
+[28-Dec-2025 11:51:36 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 30
+[28-Dec-2025 11:52:47 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Чехлы' for key 'uniq_name' in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php:44
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php(44): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/salary_categories.php on line 44
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:07:19 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/sales_all.php on line 172
+[28-Dec-2025 13:43:17 Europe/Chisinau] PHP Warning:  Undefined variable $branches in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 13:43:17 Europe/Chisinau] PHP Warning:  foreach() argument must be of type array|object, null given in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 13:43:24 Europe/Chisinau] PHP Warning:  Undefined variable $branches in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 13:43:24 Europe/Chisinau] PHP Warning:  foreach() argument must be of type array|object, null given in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 13:43:59 Europe/Chisinau] PHP Warning:  Undefined variable $branches in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 13:43:59 Europe/Chisinau] PHP Warning:  foreach() argument must be of type array|object, null given in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 13:44:14 Europe/Chisinau] PHP Warning:  Undefined variable $branches in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 13:44:14 Europe/Chisinau] PHP Warning:  foreach() argument must be of type array|object, null given in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 13:45:13 Europe/Chisinau] PHP Warning:  Undefined variable $branches in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 13:45:13 Europe/Chisinau] PHP Warning:  foreach() argument must be of type array|object, null given in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_bonus.php on line 107
+[28-Dec-2025 14:52:16 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oizsopkxtv_kub.price_revaluations' doesn't exist in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:13
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/includes/layout/header.php(13): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(24): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 13
+[28-Dec-2025 14:55:22 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 18
+[28-Dec-2025 15:04:12 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_confirm.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:12 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_confirm.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:14 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:14 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:23 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_confirm.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:23 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_confirm.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:25 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:25 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:29 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_confirm.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:29 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_confirm.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:30 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:04:30 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:06:10 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:06:10 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:06:15 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:06:15 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/price_log.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 15:22:51 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:52 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:53 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:53 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:53 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:55 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:55 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:55 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:55 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:57 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:57 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:58 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:58 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:58 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:58 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:59 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:59 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:22:59 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:23:01 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:47:43 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 15:47:49 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 19
+[28-Dec-2025 16:08:47 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:65
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 65
+[28-Dec-2025 16:30:17 Europe/Chisinau] PHP Warning:  Undefined array key "users_edit" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 16:30:17 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 16:31:35 Europe/Chisinau] PHP Warning:  Undefined array key "users_edit" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 16:31:35 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 14:38:39 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 158
+[28-Dec-2025 14:39:19 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 157
+[28-Dec-2025 14:44:57 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 150
+[28-Dec-2025 14:58:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 11
+[28-Dec-2025 15:00:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 11
+[28-Dec-2025 15:03:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 11
+[28-Dec-2025 15:04:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 11
+[28-Dec-2025 15:05:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 11
+[28-Dec-2025 15:05:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 11
+[28-Dec-2025 15:08:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/oizsopkxtv/kubinfo.live/includes/perms.php:13
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(11): has_role()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/perms.php on line 13
+[28-Dec-2025 17:22:10 Europe/Chisinau] PHP Warning:  Undefined array key "users_edit" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 17:22:10 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 17:28:49 Europe/Chisinau] PHP Warning:  Undefined array key "users_edit" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 17:28:49 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 17:29:05 Europe/Chisinau] PHP Warning:  Undefined array key "user" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 17:29:05 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 19:21:13 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:132) in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 6
+[28-Dec-2025 19:19:35 UTC] PHP Parse error:  syntax error, unexpected token "=>" in /home/oizsopkxtv/kubinfo.live/includes/router.php on line 67
+[28-Dec-2025 21:24:51 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:134) in /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php on line 19
+[28-Dec-2025 21:38:39 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:134) in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 6
+[28-Dec-2025 21:44:20 Europe/Chisinau] PHP Parse error:  syntax error, unexpected token "endif", expecting end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 152
+[28-Dec-2025 21:45:35 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:133) in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 6
+[28-Dec-2025 22:15:58 Europe/Chisinau] PHP Warning:  Undefined array key "user" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 22:15:58 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 22:21:22 Europe/Chisinau] PHP Warning:  Undefined array key "users_edit" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[28-Dec-2025 22:21:22 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 08:57:20 Europe/Chisinau] PHP Parse error:  syntax error, unexpected end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 165
+[29-Dec-2025 09:00:11 Europe/Chisinau] PHP Parse error:  syntax error, unexpected end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 165
+[29-Dec-2025 09:08:28 Europe/Chisinau] PHP Parse error:  syntax error, unexpected token "endif", expecting end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 183
+[29-Dec-2025 09:10:04 Europe/Chisinau] PHP Parse error:  syntax error, unexpected token "endif", expecting end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 185
+[29-Dec-2025 09:12:07 Europe/Chisinau] PHP Warning:  Undefined variable $checkin_enabled in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 169
+[29-Dec-2025 09:12:07 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php:178
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 178
+[29-Dec-2025 09:27:46 Europe/Chisinau] PHP Warning:  Undefined array key "sale_all" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 09:27:46 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 09:35:57 Europe/Chisinau] PHP Warning:  Undefined array key "report_sales_user_chart.php=1" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 09:35:57 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 09:36:02 Europe/Chisinau] PHP Warning:  Undefined array key "report_sales_user_chart" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 09:36:02 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 10:01:19 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_user_chart.php on line 11
+[29-Dec-2025 10:01:19 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.total_amount' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_user_chart.php:60
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_user_chart.php(60): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_user_chart.php on line 60
+[29-Dec-2025 10:01:28 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.total_amount' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php:39
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php(39): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php on line 39
+[29-Dec-2025 10:01:50 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.total_amount' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php:39
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php(39): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php on line 39
+[29-Dec-2025 10:03:53 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_user_chart.php on line 11
+[29-Dec-2025 10:03:53 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'si.total_amount' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_user_chart.php:60
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_user_chart.php(60): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_user_chart.php on line 60
+[29-Dec-2025 10:14:33 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 26
+[29-Dec-2025 10:16:09 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 26
+[29-Dec-2025 10:18:34 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 43
+[29-Dec-2025 10:23:16 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'created_at' in 'INSERT INTO' in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:48
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(48): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 48
+[29-Dec-2025 10:24:48 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:24:48 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:49
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(49): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:25:03 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:25:03 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:49
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(49): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:26:09 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:26:09 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:49
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(49): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:26:12 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:26:12 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:49
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(49): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:27:28 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:27:28 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:49
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(49): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:27:31 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:27:31 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:49
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(49): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:29:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:29:06 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:49
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(49): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:30:48 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:30:48 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:49
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(49): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 49
+[29-Dec-2025 10:51:44 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 46
+[29-Dec-2025 10:51:44 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:46
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(46): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 46
+[29-Dec-2025 10:53:09 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 50
+[29-Dec-2025 10:53:09 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:50
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(50): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 50
+[29-Dec-2025 11:05:32 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/price_revaluation.php on line 43
+[29-Dec-2025 11:21:40 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_fix" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 11:21:40 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 11:25:45 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_fix" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 11:25:45 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 11:25:47 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_fix" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 11:25:47 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 11:30:05 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_fix" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 11:30:05 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 11:39:23 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_charts" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 11:39:23 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 12:11:35 Europe/Chisinau] PHP Warning:  Undefined array key "user_c" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 12:11:35 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 12:11:40 Europe/Chisinau] PHP Warning:  Undefined array key "user_chart" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 12:11:40 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 12:11:44 Europe/Chisinau] PHP Warning:  Undefined array key "user_charts" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 12:11:44 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 13:08:54 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:156) in /home/oizsopkxtv/kubinfo.live/admin/pages/user_edit.php on line 60
+[29-Dec-2025 14:39:42 Europe/Chisinau] PHP Fatal error:  Cannot redeclare h() (previously declared in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php:52) in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 266
+[29-Dec-2025 14:41:39 Europe/Chisinau] PHP Fatal error:  Cannot redeclare h() (previously declared in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php:52) in /home/oizsopkxtv/kubinfo.live/admin/pages/shifts.php on line 266
+[29-Dec-2025 15:28:06 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:155) in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 11
+[29-Dec-2025 15:37:20 Europe/Chisinau] PHP Warning:  Undefined array key "user_" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 15:37:20 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 15:37:50 Europe/Chisinau] PHP Warning:  Undefined array key "user_meneger" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 15:37:50 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 15:37:59 Europe/Chisinau] PHP Warning:  Undefined array key "users_meneger" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 15:37:59 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 15:38:06 Europe/Chisinau] PHP Warning:  Undefined array key "users_menege" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 15:38:06 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[29-Dec-2025 16:00:57 Europe/Chisinau] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php on line 37
+[29-Dec-2025 16:42:10 Europe/Chisinau] PHP Parse error:  syntax error, unexpected token "endif", expecting end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 218

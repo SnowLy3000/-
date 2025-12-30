@@ -1,0 +1,160 @@
+<?php
+require_once __DIR__ . '/../../includes/auth.php';
+require_once __DIR__ . '/../../includes/db.php';
+require_once __DIR__ . '/../../includes/perms.php';
+
+require_auth();
+
+// ЗАМЕНЯЕМ: теперь доступ по праву управления товарами
+require_role('manage_products');
+
+if (!function_exists('h')) {
+    function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
+}
+
+/* ================= ДОБАВЛЕНИЕ ТОВАРА ================= */
+$error = '';
+if ($_SERVER['REQUEST_METHOD']==='POST') {
+    $name = trim($_POST['name']);
+    $cat  = (int)$_POST['category_id'];
+
+    if ($name !== '' && $cat > 0) {
+        $stmt = $pdo->prepare("SELECT id FROM products WHERE name = ? LIMIT 1");
+        $stmt->execute([$name]);
+
+        if ($stmt->fetch()) {
+            $error = '❌ Такой товар уже есть в базе';
+        } else {
+            $stmt = $pdo->prepare("INSERT INTO products (name, category_id, is_active, created_at) VALUES (?, ?, 1, NOW())");
+            $stmt->execute([$name, $cat]);
+            echo "<script>window.location.href='?page=products&added=1';</script>";
+            exit;
+        }
+    }
+}
+
+/* === СТАТИСТИКА === */
+$totalProducts = $pdo->query("SELECT COUNT(*) FROM products")->fetchColumn();
+$totalCats = $pdo->query("SELECT COUNT(*) FROM salary_categories WHERE is_active=1")->fetchColumn();
+
+$cats = $pdo->query("SELECT id, name, percent FROM salary_categories WHERE is_active=1 ORDER BY percent DESC")->fetchAll();
+$products = $pdo->query("
+    SELECT p.name, c.name as cat, c.percent 
+    FROM products p 
+    JOIN salary_categories c ON c.id = p.category_id 
+    ORDER BY p.id DESC LIMIT 20
+")->fetchAll();
+?>
+
+<style>
+    .products-header { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 25px; }
+    .stat-mini-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 20px; display: flex; align-items: center; gap: 15px; }
+    .stat-mini-card .icon { width: 45px; height: 45px; border-radius: 12px; background: rgba(120,90,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 20px; color: #785aff; }
+    .stat-mini-card b { font-size: 20px; display: block; }
+    .stat-mini-card span { font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+
+    .search-container { position: relative; }
+    .search-input-wrapper { display: flex; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; padding: 5px 15px; align-items: center; transition: 0.3s; }
+    .search-input-wrapper:focus-within { border-color: #785aff; background: rgba(120,90,255,0.05); }
+    .search-input-wrapper input { background: none; border: none; color: #fff; padding: 12px; width: 100%; outline: none; font-size: 14px; }
+
+    .search-results {
+        position: absolute; top: 110%; left: 0; right: 0;
+        background: #15192b; border: 1px solid rgba(120,90,255,0.3);
+        border-radius: 15px; max-height: 250px; overflow-y: auto;
+        z-index: 100; box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+    .search-results div { padding: 12px 18px; border-bottom: 1px solid rgba(255,255,255,0.03); transition: 0.2s; font-size: 13px; display: flex; justify-content: space-between; cursor: default; }
+    .search-results div:hover { background: rgba(120,90,255,0.15); }
+
+    .add-form-grid { display: grid; grid-template-columns: 2fr 1.2fr auto; gap: 15px; align-items: end; }
+    @media (max-width: 768px) { .add-form-grid { grid-template-columns: 1fr; } }
+</style>
+
+<div class="dashboard-products">
+    
+    <div style="margin-bottom: 25px;">
+        <h1 style="margin:0; font-size: 24px;">📦 База товаров</h1>
+        <p class="muted">Управление номенклатурой и привязкой к бонусным группам</p>
+    </div>
+
+    <div class="products-header">
+        <div class="stat-mini-card">
+            <div class="icon">📦</div>
+            <div><span>Всего позиций</span><b><?= number_format($totalProducts) ?></b></div>
+        </div>
+        <div class="stat-mini-card">
+            <div class="icon">💸</div>
+            <div><span>Бонусных групп</span><b><?= $totalCats ?></b></div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 25px; border: 1px solid rgba(120,90,255,0.2);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <b style="font-size: 15px; color: #b866ff;">🔎 Проверить наличие в базе</b>
+            <span style="font-size: 10px; background: #785aff; padding: 2px 8px; border-radius: 5px;">LIVE</span>
+        </div>
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <span style="opacity: 0.5;">🔍</span>
+                <input id="searchProduct" placeholder="Введите название товара для проверки...">
+            </div>
+            <div id="results" class="search-results" style="display:none"></div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 25px;">
+        <h3 style="margin-top:0; margin-bottom: 20px; font-size: 16px;">➕ Добавить новый товар</h3>
+        
+        <?php if ($error): ?><div style="color:#ff6b6b; background: rgba(255,107,107,0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px; font-size: 13px; border: 1px solid rgba(255,107,107,0.2);"><?=h($error)?></div><?php endif; ?>
+        <?php if (isset($_GET['added'])): ?><div style="color:#7CFF6B; background: rgba(124, 255, 107, 0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px; font-size: 13px; border: 1px solid rgba(124, 255, 107, 0.2);">✅ Товар успешно добавлен в базу</div><?php endif; ?>
+
+        <form method="post" class="add-form-grid">
+            <div>
+                <label class="muted" style="font-size:10px; margin-bottom:8px; display:block; text-transform:uppercase;">Наименование</label>
+                <input name="name" class="st-input" required placeholder="Напр: iPhone 15 Pro Max Silicon Case" style="width: 100%; box-sizing: border-box;">
+            </div>
+            <div>
+                <label class="muted" style="font-size:10px; margin-bottom:8px; display:block; text-transform:uppercase;">Группа процентов</label>
+                <select name="category_id" class="st-input" required style="width: 100%; box-sizing: border-box;">
+                    <option value="">— Выбрать —</option>
+                    <?php foreach($cats as $c): ?>
+                        <option value="<?=$c['id']?>"><?=h($c['name'])?> (<?=$c['percent']?>%)</option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+            <button class="btn" style="height: 44px; padding: 0 25px; font-weight: 700;">СОХРАНИТЬ</button>
+        </form>
+    </div>
+
+    <div class="card" style="padding: 0; overflow: hidden; border-radius: 20px;">
+        <div style="padding: 20px 20px 10px 20px;">
+            <b style="font-size: 15px;">📋 Недавно добавленные</b>
+        </div>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="text-align: left; opacity: 0.3; font-size: 10px; text-transform: uppercase; letter-spacing: 1px;">
+                    <th style="padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.05);">Товар</th>
+                    <th style="padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.05);">Категория</th>
+                    <th style="padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); text-align: right;">Ставка</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($products as $p): ?>
+                <tr class="product-row" style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+                    <td style="padding: 15px 20px;"><b style="font-size: 14px;"><?=h($p['name'])?></b></td>
+                    <td style="padding: 15px 20px;"><span style="font-size: 12px; color: rgba(255,255,255,0.5);"><?=h($p['cat'])?></span></td>
+                    <td style="padding: 15px 20px; text-align: right;">
+                        <span style="color: #7CFF6B; font-weight: 800;"><?=h($p['percent'])?>%</span>
+                    </td>
+                </tr>
+                <?php endforeach ?>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script>
+const input = document.getElementById('searchProduct');
+const box = document.getElementById

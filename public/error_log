@@ -1,0 +1,55 @@
+[21-Dec-2025 15:21:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php(47): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/public/login.php(7): login_user()
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php on line 47
+[21-Dec-2025 15:21:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php(47): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/public/login.php(7): login_user()
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php on line 47
+[21-Dec-2025 15:21:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php(47): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/public/login.php(7): login_user()
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php on line 47
+[21-Dec-2025 15:34:13 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php(47): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/public/login.php(6): login_user()
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php on line 47
+[21-Dec-2025 15:40:16 UTC] PHP Warning:  Undefined array key "login" in /home/oizsopkxtv/kubinfo.live/public/login.php on line 6
+[21-Dec-2025 15:40:16 UTC] PHP Warning:  Undefined array key "password" in /home/oizsopkxtv/kubinfo.live/public/login.php on line 6
+[21-Dec-2025 15:40:16 UTC] PHP Fatal error:  Uncaught TypeError: login_user(): Argument #1 ($login) must be of type string, null given, called in /home/oizsopkxtv/kubinfo.live/public/login.php on line 6 and defined in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php:37
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/public/login.php(6): login_user()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php on line 37
+[21-Dec-2025 15:43:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php(47): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/public/login.php(17): login_user()
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php on line 47
+[21-Dec-2025 15:43:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php(47): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/public/login.php(17): login_user()
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php on line 47
+[21-Dec-2025 15:44:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php(47): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/public/login.php(17): login_user()
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php on line 47
+[29-Dec-2025 13:07:47 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '068981969' for key 'uq_users_phone' in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php:20
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php(20): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/public/login.php(34): register_user()
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth_logic.php on line 20

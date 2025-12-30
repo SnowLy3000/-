@@ -1,0 +1,35 @@
+[28-Dec-2025 19:25:54 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'brand' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php(14): PDO->prepare()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php on line 14
+[28-Dec-2025 19:26:56 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'brand' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php(14): PDO->prepare()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php on line 14
+[28-Dec-2025 19:26:58 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'brand' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php(14): PDO->prepare()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php on line 14
+[28-Dec-2025 19:26:58 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'brand' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php(14): PDO->prepare()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php on line 14
+[28-Dec-2025 19:26:58 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'brand' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php(14): PDO->prepare()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php on line 14
+[28-Dec-2025 19:26:59 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'brand' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php(14): PDO->prepare()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php on line 14
+[28-Dec-2025 19:27:00 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'brand' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php(14): PDO->prepare()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/ajax/search_products.php on line 14

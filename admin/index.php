@@ -1,5 +1,5 @@
 <?php
-// /cabinet/index.php
+// /admin/index.php
 
 require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/perms.php';
@@ -7,20 +7,20 @@ require_once __DIR__ . '/../includes/router.php';
 
 require_auth();
 
-// Доступ в кабинет: Employee ИЛИ админ с Employee (двойная роль)
-if (!has_role('Employee') && !has_role('Admin') && !has_role('Owner') && !has_role('Marketing')) {
+// Доступ в админку: Admin/Owner (Marketing тоже можно, если хочешь)
+if (!has_role('Admin') && !has_role('Owner') && !has_role('Marketing')) {
     http_response_code(403);
     exit('Access denied');
 }
 
 $page = q('page', 'dashboard');
-$pages = cabinet_pages();
+$pages = admin_pages();
 
 if (!isset($pages[$page])) {
     $page = 'dashboard';
 }
 
-$area = 'cabinet';
+$area = 'admin';
 require __DIR__ . '/../includes/layout/header.php';
 require $pages[$page];
 require __DIR__ . '/../includes/layout/footer.php';

@@ -1,0 +1,57 @@
+<?php
+require_once __DIR__ . '/../../includes/auth.php';
+require_once __DIR__ . '/../../includes/db.php';
+
+require_auth();
+
+$user = current_user();
+$transferId = (int)($_POST['transfer_id'] ?? 0);
+
+if (!$transferId) exit('Invalid');
+
+$pdo->beginTransaction();
+
+// получаем заявку
+$stmt = $pdo->prepare("
+    SELECT * FROM shift_transfers
+    WHERE id = ? AND to_user_id = ? AND status = 'pending'
+    FOR UPDATE
+");
+$stmt->execute([$transferId, $user['id']]);
+$t = $stmt->fetch();
+
+if (!$t) {
+    $pdo->rollBack();
+    exit('Not allowed');
+}
+
+// закрываем старую смену
+$pdo->prepare("
+    UPDATE work_shifts SET status='completed'
+    WHERE id = ?
+")->execute([$t['shift_id']]);
+
+// создаём новую смену для принимающего
+$stmt = $pdo->prepare("
+    INSERT INTO work_shifts
+    (user_id, branch_id, shift_date, start_time, status, created_by)
+    SELECT ?, branch_id, shift_date, NOW(), 'active', ?
+    FROM work_shifts WHERE id = ?
+");
+$stmt->execute([
+    $user['id'],
+    $user['id'],
+    $t['shift_id']
+]);
+
+// обновляем заявку
+$pdo->prepare("
+    UPDATE shift_transfers
+    SET status='approved', approved_at=NOW()
+    WHERE id = ?
+")->execute([$transferId]);
+
+$pdo->commit();
+
+header('Location: /cabinet/index.php?page=checkin');
+exit;

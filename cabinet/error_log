@@ -1,89 +1,505 @@
-[18-Dec-2025 08:50:06 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 38
-[18-Dec-2025 08:58:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oizsopkxtv_kubmd.test_results' doesn't exist in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:64
+[21-Dec-2025 15:34:49 UTC] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/cabinet/../includes/router.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 6
+[21-Dec-2025 15:34:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/cabinet/../includes/router.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:6
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(64): PDO->prepare()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 64
-[18-Dec-2025 09:00:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oizsopkxtv_kubmd.test_results' doesn't exist in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:64
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 6
+[21-Dec-2025 15:35:41 UTC] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/cabinet/../includes/router.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 6
+[21-Dec-2025 15:35:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/cabinet/../includes/router.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:6
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(64): PDO->prepare()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 64
-[18-Dec-2025 11:05:54 UTC] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/includes/config.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/includes/auth.php on line 3
-[18-Dec-2025 11:05:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/includes/config.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/includes/auth.php:3
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 6
+[21-Dec-2025 15:39:22 UTC] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/cabinet/../includes/router.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 6
+[21-Dec-2025 15:39:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/cabinet/../includes/router.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:6
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(2): require()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth.php on line 3
-[18-Dec-2025 11:11:36 UTC] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/includes/config.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/includes/auth.php on line 3
-[18-Dec-2025 11:11:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/includes/config.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/includes/auth.php:3
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 6
+[22-Dec-2025 19:50:35 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[22-Dec-2025 19:51:03 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 05:47:50 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 07:30:32 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 07:30:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getSetting() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:8
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(2): require()
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
 #1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/includes/auth.php on line 3
-[18-Dec-2025 13:09:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oizsopkxtv_kubmd.user_badges' doesn't exist in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:93
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 8
+[23-Dec-2025 07:30:41 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 07:30:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getSetting() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:8
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(93): PDO->prepare()
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
 #1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 93
-[18-Dec-2025 13:11:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oizsopkxtv_kubmd.user_badges' doesn't exist in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:93
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 8
+[23-Dec-2025 07:38:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getSetting() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:8
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(93): PDO->prepare()
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
 #1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 93
-[18-Dec-2025 19:02:47 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php on line 145
-[18-Dec-2025 19:02:47 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php on line 155
-[18-Dec-2025 19:07:35 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php on line 145
-[18-Dec-2025 19:07:35 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php on line 155
-[18-Dec-2025 19:11:28 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php on line 145
-[18-Dec-2025 19:11:28 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php on line 155
-[18-Dec-2025 20:04:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.rate' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php:38
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 8
+[23-Dec-2025 07:41:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getSetting() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:8
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php(38): PDO->prepare()
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
 #1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php on line 38
-[18-Dec-2025 20:04:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.rate' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php:38
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 8
+[23-Dec-2025 08:43:14 UTC] PHP Parse error:  Unmatched '}' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 30
+[23-Dec-2025 09:10:08 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 09:11:19 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 09:25:10 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 09:38:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.session_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:8
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php(38): PDO->prepare()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/calendar.php on line 38
-[19-Dec-2025 07:31:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_time' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php:47
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(8): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 8
+[23-Dec-2025 09:38:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.session_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:8
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php(47): PDO->query()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php on line 47
-[19-Dec-2025 07:31:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_time' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php:47
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(8): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 8
+[23-Dec-2025 15:29:32 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 19:48:58 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 19:53:12 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 19:53:52 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 20:34:27 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 20:37:16 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 20:37:47 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 20:43:40 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 21:02:56 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 21:02:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ss.shift_id' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:28
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php(47): PDO->query()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php on line 47
-[19-Dec-2025 07:31:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_time' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php:47
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(28): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 28
+[23-Dec-2025 21:03:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ss.shift_id' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:28
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php(47): PDO->query()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php on line 47
-[19-Dec-2025 07:33:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_time' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php:14
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(28): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 28
+[23-Dec-2025 21:06:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'shift_id' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:31
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php(14): PDO->query()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php on line 14
-[19-Dec-2025 07:33:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_time' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php:14
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(31): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 31
+[23-Dec-2025 21:13:25 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 21:13:37 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 21:13:59 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 21:24:26 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 21:24:31 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 21:27:44 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 21:30:56 UTC] PHP Deprecated:  Function strftime() is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 76
+[23-Dec-2025 22:25:37 UTC] PHP Parse error:  syntax error, unexpected token "return" in /home/oizsopkxtv/kubinfo.live/includes/config.php on line 5
+[24-Dec-2025 01:19:31 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_date' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:49
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php(14): PDO->query()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php on line 14
-[19-Dec-2025 07:35:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_time' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php:14
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(49): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 49
+[24-Dec-2025 01:33:17 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_date' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:49
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php(14): PDO->query()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php on line 14
-[19-Dec-2025 07:35:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_time' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php:14
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(49): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 49
+[24-Dec-2025 01:34:14 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_date' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:49
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php(14): PDO->query()
-#1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php on line 14
-[19-Dec-2025 07:35:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start_time' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php:14
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(49): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 49
+[24-Dec-2025 08:33:50 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_date' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:46
 Stack trace:
-#0 /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php(14): PDO->query()
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(46): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 46
+[24-Dec-2025 08:34:01 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_date' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:29
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(29): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 29
+[24-Dec-2025 08:34:03 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seen_at' in 'SET' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 08:34:07 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_date' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:46
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(46): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 46
+[24-Dec-2025 08:34:18 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_date' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:29
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(29): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 29
+[24-Dec-2025 08:34:21 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_date' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:46
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(46): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 46
+[24-Dec-2025 08:34:37 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_date' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:29
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(29): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 29
+[24-Dec-2025 08:34:55 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seen_at' in 'SET' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 08:36:32 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seen_at' in 'SET' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 08:36:35 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:46
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(46): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 46
+[24-Dec-2025 08:36:36 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:46
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(46): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 46
+[24-Dec-2025 08:38:42 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:44
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(44): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 44
+[24-Dec-2025 08:38:44 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:48
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(48): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 48
+[24-Dec-2025 08:38:46 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seen_at' in 'SET' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 08:38:49 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:44
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(44): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 44
+[24-Dec-2025 08:39:06 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'st.shift_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php:48
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php(48): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/checkin.php on line 48
+[24-Dec-2025 08:39:18 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seen_at' in 'SET' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 08:41:43 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seen_at' in 'SET' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 08:42:06 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seen_at' in 'SET' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 08:42:37 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE to_user_id = ?
+      AND shift_date = ?
+      AND status = 'pending'' at line 2 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 08:42:39 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE to_user_id = ?
+      AND shift_date = ?
+      AND status = 'pending'' at line 2 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 08:43:09 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE to_user_id = ?
+      AND shift_date = ?
+      AND status = 'pending'' at line 2 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php:12
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php(12): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/transfers.php on line 12
+[24-Dec-2025 12:10:32 UTC] PHP Warning:  Undefined variable $items in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 5
+[24-Dec-2025 20:26:53 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cross
+        FROM sales s
+        LEFT JOIN (
+            SELECT sale_id, CO...' at line 4 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:97
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(97): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(117): salesStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 97
+[24-Dec-2025 20:41:00 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cross
+        FROM sales s
+        LEFT JOIN (
+            SELECT sale_id, CO...' at line 4 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:97
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(97): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(117): salesStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 97
+[25-Dec-2025 11:18:39 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cross
+        FROM sales s
+        LEFT JOIN (
+            SELECT sale_id, CO...' at line 4 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:97
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(97): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(117): salesStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 97
+[25-Dec-2025 11:18:46 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cross
+        FROM sales s
+        LEFT JOIN (
+            SELECT sale_id, CO...' at line 4 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:97
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(97): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(117): salesStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 97
+[25-Dec-2025 11:19:12 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cross
+        FROM sales s
+        LEFT JOIN (
+            SELECT sale_id, CO...' at line 4 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:97
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(97): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(117): salesStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 97
+[25-Dec-2025 09:21:22 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 120
+[25-Dec-2025 09:26:39 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 120
+[25-Dec-2025 09:26:41 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 120
+[25-Dec-2025 12:54:35 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'payment_type' cannot be null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:42
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php(42): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 42
+[25-Dec-2025 12:54:40 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'payment_type' cannot be null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:42
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php(42): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 42
+[25-Dec-2025 12:54:42 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'payment_type' cannot be null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:42
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php(42): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 42
+[25-Dec-2025 12:54:51 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'payment_type' cannot be null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:42
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php(42): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 42
+[25-Dec-2025 12:55:13 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'payment_type' cannot be null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:42
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php(42): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 42
+[25-Dec-2025 12:58:55 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cash' in 'VALUES' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:38
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php(38): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 38
+[25-Dec-2025 12:59:50 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cash' in 'VALUES' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php:38
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php(38): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 38
+[26-Dec-2025 09:25:48 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'kb.bonus_amount' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php:11
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php(11): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 11
+[26-Dec-2025 09:27:29 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'kb.bonus_amount' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php:11
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php(11): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 11
+[26-Dec-2025 13:08:34 Europe/Chisinau] PHP Warning:  Undefined array key 0 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 23
+[26-Dec-2025 13:08:34 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 23
+[26-Dec-2025 13:08:34 Europe/Chisinau] PHP Fatal error:  Uncaught TypeError: getLevel(): Return value must be of type string, null returned in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php:25
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php(141): getLevel()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 25
+[26-Dec-2025 13:08:37 Europe/Chisinau] PHP Warning:  Undefined array key 0 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 23
+[26-Dec-2025 13:08:37 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 23
+[26-Dec-2025 13:08:37 Europe/Chisinau] PHP Fatal error:  Uncaught TypeError: getLevel(): Return value must be of type string, null returned in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php:25
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php(141): getLevel()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 25
+[26-Dec-2025 13:08:57 Europe/Chisinau] PHP Warning:  Undefined array key 0 in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 23
+[26-Dec-2025 13:08:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 23
+[26-Dec-2025 13:08:57 Europe/Chisinau] PHP Fatal error:  Uncaught TypeError: getLevel(): Return value must be of type string, null returned in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php:25
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php(141): getLevel()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/kpi.php on line 25
+[27-Dec-2025 21:27:48 Europe/Chisinau] PHP Warning:  Undefined variable $time in /home/oizsopkxtv/kubinfo.live/cabinet/pages/schedule.php on line 9
+[27-Dec-2025 21:27:48 Europe/Chisinau] PHP Warning:  Undefined variable $time in /home/oizsopkxtv/kubinfo.live/cabinet/pages/schedule.php on line 14
+[27-Dec-2025 21:27:48 Europe/Chisinau] PHP Warning:  Undefined variable $time in /home/oizsopkxtv/kubinfo.live/cabinet/pages/schedule.php on line 15
+[27-Dec-2025 21:27:48 Europe/Chisinau] PHP Warning:  Undefined variable $time in /home/oizsopkxtv/kubinfo.live/cabinet/pages/schedule.php on line 17
+[27-Dec-2025 21:27:48 Europe/Chisinau] PHP Warning:  Undefined variable $time in /home/oizsopkxtv/kubinfo.live/cabinet/pages/schedule.php on line 18
+[27-Dec-2025 21:27:48 Europe/Chisinau] PHP Warning:  Undefined variable $time in /home/oizsopkxtv/kubinfo.live/cabinet/pages/schedule.php on line 38
+[27-Dec-2025 21:27:48 Europe/Chisinau] PHP Warning:  Undefined variable $time in /home/oizsopkxtv/kubinfo.live/cabinet/pages/schedule.php on line 48
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 130
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 130
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 130
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 134
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 134
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 138
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 138
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 138
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 138
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 142
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 142
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 142
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 142
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $todayShift in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 148
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $todayStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 161
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 161
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 161
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $todayStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 165
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 165
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $todayStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 169
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 169
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $todayStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 173
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 173
+[27-Dec-2025 22:07:30 Europe/Chisinau] PHP Warning:  Undefined variable $nextShift in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 179
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 130
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 130
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 130
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 134
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 134
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 138
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 138
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 138
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 138
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 142
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 142
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $monthStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 142
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 142
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $todayShift in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 148
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $todayStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 161
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 161
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 161
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $todayStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 165
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 165
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $todayStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 169
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 169
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $todayStats in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 173
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 173
+[27-Dec-2025 22:11:57 Europe/Chisinau] PHP Warning:  Undefined variable $nextShift in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 179
+[27-Dec-2025 20:13:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:99
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
 #1 {main}
-  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/checkin.php on line 14
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 99
+[27-Dec-2025 20:33:59 UTC] PHP Warning:  Undefined variable $hasActiveShift in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 108
+[27-Dec-2025 20:33:59 UTC] PHP Warning:  Undefined variable $total in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 199
+[27-Dec-2025 20:33:59 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 199
+[27-Dec-2025 20:33:59 UTC] PHP Warning:  Undefined variable $saleId in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 203
+[28-Dec-2025 08:26:11 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 31
+[28-Dec-2025 08:26:43 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 31
+[28-Dec-2025 08:30:26 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 31
+[28-Dec-2025 08:32:51 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 31
+[28-Dec-2025 09:08:41 Europe/Chisinau] PHP Warning:  file_get_contents(/home/oizsopkxtv/kubinfo.live/cabinet/pages/../../includes/layout/sales_style.css): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sales.php on line 95
+[28-Dec-2025 10:19:07 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 23
+[28-Dec-2025 10:21:09 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:112) in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 23
+[28-Dec-2025 20:57:29 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 20:57:29 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 20:57:49 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 20:57:49 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 20:58:08 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 20:58:08 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 20:58:15 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 20:58:15 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 20:58:19 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 20:58:19 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 21:11:16 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[28-Dec-2025 21:11:16 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[29-Dec-2025 08:28:47 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[29-Dec-2025 08:28:47 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[29-Dec-2025 08:29:08 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[29-Dec-2025 08:29:08 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[29-Dec-2025 08:29:13 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[29-Dec-2025 08:29:13 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[29-Dec-2025 09:14:25 Europe/Chisinau] PHP Warning:  Undefined array key "price_confirm" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[29-Dec-2025 09:14:25 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[29-Dec-2025 09:19:57 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/price_confirm.php:39
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/price_confirm.php on line 39
