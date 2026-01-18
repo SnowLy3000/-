@@ -33,10 +33,25 @@ function require_auth(): void
 }
 
 /**
- * Выйти из системы
+ * Выйти из системы с записью лога
  */
 function logout(): void
 {
+    // Подключаем БД прямо здесь для записи лога перед выходом
+    global $pdo;
+    if (!$pdo) {
+        require_once __DIR__ . '/db.php';
+    }
+
+    $userId = $_SESSION['user']['id'] ?? 0;
+
+    if ($userId) {
+        /* === ЗАПИСЬ ВЫХОДА В ЛОГИ === */
+        $stmtLog = $pdo->prepare("INSERT INTO user_sessions_log (user_id, action_type, ip_address) VALUES (?, 'logout', ?)");
+        $stmtLog->execute([$userId, $_SERVER['REMOTE_ADDR']]);
+        /* ============================ */
+    }
+
     session_destroy();
     header('Location: /public/login.php');
     exit;

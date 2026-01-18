@@ -5,45 +5,46 @@ require_once __DIR__ . '/../../includes/db.php';
 require_auth();
 $userId = (int)($_SESSION['user']['id'] ?? 0);
 
-// Получаем данные из POST
-$saleId  = (int)($_POST['sale_id'] ?? 0);
-$source  = trim($_POST['client_source'] ?? 'Не указано'); // Даем значение по умолчанию, если пусто
-$payment = trim($_POST['payment_type'] ?? 'cash');
+$saleId   = (int)($_POST['sale_id'] ?? 0);
+$payment  = trim($_POST['payment_type'] ?? 'cash');
 
-// Если ID чека нет - это действительно ошибка
-if (!$saleId) {
-    exit('Ошибка: ID чека не передан');
-}
+// Новые данные из формы
+$clientId       = !empty($_POST['client_id']) ? (int)$_POST['client_id'] : null;
+$discountAmount = !empty($_POST['final_discount_amount']) ? (float)$_POST['final_discount_amount'] : 0;
 
-/* 1. Проверяем доступ к чеку */
+if (!$saleId) exit('Ошибка: ID чека не передан');
+
+// Проверяем доступ к чеку
 $stmt = $pdo->prepare("SELECT id FROM sales WHERE id = ? AND user_id = ? LIMIT 1");
 $stmt->execute([$saleId, $userId]);
-if (!$stmt->fetch()) {
-    exit('Нет доступа к этому чеку');
-}
+if (!$stmt->fetch()) exit('Нет доступа к этому чеку');
 
-/* 2. Считаем финальную сумму чека по всем позициям (sale_items) */
-// Это гарантирует, что в таблицу sales запишется правильный total_amount
-$stmt = $pdo->prepare("
-    SELECT SUM(CEIL(price - (price * discount / 100)) * quantity) as real_total 
-    FROM sale_items 
-    WHERE sale_id = ?
-");
+// 1. Считаем грязную сумму (сумма товаров в корзине до клиентской скидки)
+$stmt = $pdo->prepare("SELECT SUM(CEIL(price - (price * discount / 100)) * quantity) FROM sale_items WHERE sale_id = ?");
 $stmt->execute([$saleId]);
-$totalAmount = (float)($stmt->fetchColumn() ?: 0);
+$subtotal = (float)($stmt->fetchColumn() ?: 0);
 
-/* 3. Финализируем чек */
+// 2. Вычисляем финальную сумму к оплате (грязная сумма минус скидка клиента)
+$finalTotal = $subtotal - $discountAmount;
+
+// 3. Закрываем чек: записываем клиента, итоговую сумму, сумму скидки и тип оплаты
 $stmt = $pdo->prepare("
-    UPDATE sales
-    SET client_source = ?, 
+    UPDATE sales 
+    SET client_id = ?, 
         payment_type = ?, 
-        total_amount = ?,
-        created_at = NOW() -- Обновляем время на реальное время продажи
+        total_amount = ?, 
+        discount_amount = ?, 
+        created_at = NOW() 
     WHERE id = ?
 ");
+$stmt->execute([$clientId, $payment, $finalTotal, $discountAmount, $saleId]);
 
-$stmt->execute([$source, $payment, $totalAmount, $saleId]);
+// Если клиент был указан, можно обновить его общую сумму покупок (для истории)
+if ($clientId) {
+    $stmt = $pdo->prepare("UPDATE clients SET total_bought = total_bought + ? WHERE id = ?");
+    $stmt->execute([$finalTotal, $clientId]);
+}
 
-/* 4. Редирект обратно на продажи (откроется новый чистый чек) */
+// Возвращаемся в раздел продаж
 header('Location: /cabinet/index.php?page=sales');
 exit;

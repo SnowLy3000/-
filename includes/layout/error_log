@@ -6,3 +6,6 @@ Stack trace:
 #0 /home/oizsopkxtv/kubinfo.live/includes/layout/header.php(44): implode()
 #1 {main}
   thrown in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 44
+[03-Jan-2026 17:38:51 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 98
+[03-Jan-2026 17:38:51 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 98
+[03-Jan-2026 17:38:51 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 102

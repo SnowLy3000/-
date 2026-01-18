@@ -7,7 +7,6 @@ require_once __DIR__ . '/../includes/router.php';
 
 require_auth();
 
-// Доступ в кабинет: Employee ИЛИ админ с Employee (двойная роль)
 if (!has_role('Employee') && !has_role('Admin') && !has_role('Owner') && !has_role('Marketing')) {
     http_response_code(403);
     exit('Access denied');
@@ -21,6 +20,16 @@ if (!isset($pages[$page])) {
 }
 
 $area = 'cabinet';
-require __DIR__ . '/../includes/layout/header.php';
+
+// ПРОВЕРКА: Если это AJAX запрос, не подключаем header и footer
+$isAjax = isset($_GET['ajax']) && $_GET['ajax'] == '1';
+
+if (!$isAjax) {
+    require __DIR__ . '/../includes/layout/header.php';
+}
+
 require $pages[$page];
-require __DIR__ . '/../includes/layout/footer.php';
+
+if (!$isAjax) {
+    require __DIR__ . '/../includes/layout/footer.php';
+}

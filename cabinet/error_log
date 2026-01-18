@@ -503,3 +503,243 @@ Stack trace:
 #0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
 #1 {main}
   thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/price_confirm.php on line 39
+[01-Jan-2026 23:21:47 Europe/Chisinau] PHP Warning:  Undefined array key "returns" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[01-Jan-2026 23:21:47 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[01-Jan-2026 23:21:58 Europe/Chisinau] PHP Warning:  Undefined array key "returns" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[01-Jan-2026 23:21:58 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[01-Jan-2026 23:27:22 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php:51
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php on line 51
+[01-Jan-2026 23:27:25 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_returned' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:50
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(50): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(76): getFullStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 50
+[01-Jan-2026 23:27:28 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_returned' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:50
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(50): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(76): getFullStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 50
+[01-Jan-2026 23:29:18 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_returned' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:50
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(50): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(76): getFullStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 50
+[01-Jan-2026 23:30:29 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_returned' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:50
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(50): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(76): getFullStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 50
+[01-Jan-2026 23:30:30 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_returned' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:50
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(50): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(76): getFullStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 50
+[01-Jan-2026 23:32:26 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 's.is_returned' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php:50
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(50): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php(76): getFullStats()
+#2 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#3 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 50
+[01-Jan-2026 23:34:20 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php:51
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php on line 51
+[01-Jan-2026 23:39:44 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php:51
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php on line 51
+[01-Jan-2026 23:41:01 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php:51
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php on line 51
+[01-Jan-2026 23:45:39 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php:51
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php on line 51
+[01-Jan-2026 23:51:32 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php:154
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php on line 154
+[01-Jan-2026 23:51:34 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php:154
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/returns.php on line 154
+[02-Jan-2026 00:54:33 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oizsopkxtv_kub.return_photos' doesn't exist in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sale_view.php:44
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/sale_view.php(44): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sale_view.php on line 44
+[02-Jan-2026 00:54:44 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'oizsopkxtv_kub.return_photos' doesn't exist in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sale_view.php:44
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/pages/sale_view.php(44): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/sale_view.php on line 44
+[03-Jan-2026 01:11:30 Europe/Chisinau] PHP Warning:  Undefined array key "clients" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[03-Jan-2026 01:11:30 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[03-Jan-2026 01:11:44 Europe/Chisinau] PHP Warning:  Undefined array key "clients" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[03-Jan-2026 01:11:44 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 25
+[03-Jan-2026 01:12:17 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.added_by' in 'ON' in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php(47): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 47
+[04-Jan-2026 16:11:54 Europe/Chisinau] PHP Warning:  Undefined variable $user in /home/oizsopkxtv/kubinfo.live/cabinet/pages/academy.php on line 5
+[04-Jan-2026 16:11:54 Europe/Chisinau] PHP Warning:  Trying to access array offset on value of type null in /home/oizsopkxtv/kubinfo.live/cabinet/pages/academy.php on line 5
+[04-Jan-2026 16:16:55 Europe/Chisinau] PHP Warning:  Undefined array key "test_view" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[04-Jan-2026 16:16:55 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[05-Jan-2026 10:18:36 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[05-Jan-2026 10:18:36 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[05-Jan-2026 10:18:38 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[05-Jan-2026 10:18:38 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[08-Jan-2026 10:05:45 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[08-Jan-2026 10:05:45 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 14:54:53 Europe/Chisinau] PHP Warning:  Undefined array key "glass" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 14:54:53 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 14:55:14 Europe/Chisinau] PHP Warning:  Undefined array key "glass" in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 14:55:14 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 15:00:31 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 15:00:31 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 15:00:33 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 15:00:33 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 15:02:22 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 15:02:22 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 17:36:34 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 17:36:34 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 17:37:12 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[09-Jan-2026 17:37:12 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[13-Jan-2026 10:34:48 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/cabinet/pages/profile.php:41
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/pages/profile.php on line 41
+[13-Jan-2026 10:53:55 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[13-Jan-2026 10:53:55 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[13-Jan-2026 11:08:02 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[13-Jan-2026 11:08:02 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[13-Jan-2026 11:10:19 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[13-Jan-2026 11:10:19 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../cabinet/pages/checkin.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/cabinet/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/cabinet/index.php on line 31
+[13-Jan-2026 15:25:26 Europe/Chisinau] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 298
+[13-Jan-2026 15:26:08 Europe/Chisinau] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 298
+[13-Jan-2026 15:28:33 Europe/Chisinau] PHP Warning:  Undefined variable $show_late_dashboard in /home/oizsopkxtv/kubinfo.live/cabinet/pages/dashboard.php on line 167
+[13-Jan-2026 16:24:16 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:125
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 125
+[13-Jan-2026 16:25:38 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:101
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 101
+[13-Jan-2026 16:35:33 Europe/Chisinau] PHP Warning:  Undefined variable $display_name in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 80
+[13-Jan-2026 16:35:56 Europe/Chisinau] PHP Warning:  Undefined variable $display_name in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 80
+[13-Jan-2026 16:36:03 Europe/Chisinau] PHP Warning:  Undefined variable $display_name in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 80
+[13-Jan-2026 16:36:05 Europe/Chisinau] PHP Warning:  Undefined variable $display_name in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 80
+[13-Jan-2026 16:36:13 Europe/Chisinau] PHP Warning:  Undefined variable $display_name in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 80
+[14-Jan-2026 14:13:51 Europe/Chisinau] PHP Warning:  Undefined variable $current_channel in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 7
+[14-Jan-2026 14:13:51 Europe/Chisinau] PHP Warning:  Undefined variable $isAdmin in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 10
+[14-Jan-2026 14:13:51 Europe/Chisinau] PHP Warning:  Undefined variable $userId in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 17
+[14-Jan-2026 14:13:51 Europe/Chisinau] PHP Warning:  Undefined variable $userId in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 17
+[14-Jan-2026 14:13:51 Europe/Chisinau] PHP Warning:  Undefined variable $current_channel in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 17
+[14-Jan-2026 14:13:51 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:31
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 31
+[14-Jan-2026 14:15:44 Europe/Chisinau] PHP Warning:  Undefined variable $current_channel in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 9
+[14-Jan-2026 14:15:44 Europe/Chisinau] PHP Warning:  Undefined variable $isAdmin in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 12
+[14-Jan-2026 14:15:44 Europe/Chisinau] PHP Warning:  Undefined variable $userId in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 19
+[14-Jan-2026 14:15:44 Europe/Chisinau] PHP Warning:  Undefined variable $userId in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 19
+[14-Jan-2026 14:15:44 Europe/Chisinau] PHP Warning:  Undefined variable $current_channel in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 19
+[14-Jan-2026 14:15:44 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:31
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 31
+[14-Jan-2026 14:15:50 Europe/Chisinau] PHP Warning:  Undefined variable $current_channel in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 9
+[14-Jan-2026 14:15:50 Europe/Chisinau] PHP Warning:  Undefined variable $isAdmin in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 12
+[14-Jan-2026 14:15:50 Europe/Chisinau] PHP Warning:  Undefined variable $userId in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 19
+[14-Jan-2026 14:15:50 Europe/Chisinau] PHP Warning:  Undefined variable $userId in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 19
+[14-Jan-2026 14:15:50 Europe/Chisinau] PHP Warning:  Undefined variable $current_channel in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 19
+[14-Jan-2026 14:15:50 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:31
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/cabinet/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 31
