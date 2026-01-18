@@ -2,3 +2,31 @@
 Stack trace:
 #0 {main}
   thrown in /home/oizsopkxtv/kubinfo.live/admin/actions/branch_save.php on line 7
+[03-Jan-2026 22:42:17 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_topic_save.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_topic_save.php on line 8
+[03-Jan-2026 22:42:25 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_topic_save.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_topic_save.php on line 8
+[03-Jan-2026 22:54:05 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_lesson_save.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_lesson_save.php on line 6
+[03-Jan-2026 22:54:09 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_lesson_save.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_lesson_save.php on line 6
+[03-Jan-2026 22:54:10 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_lesson_save.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_lesson_save.php on line 6
+[03-Jan-2026 22:54:10 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_lesson_save.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/actions/academy_lesson_save.php on line 6
+[04-Jan-2026 12:35:48 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function has_role() in /home/oizsopkxtv/kubinfo.live/admin/actions/save_gamification.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/actions/save_gamification.php on line 5

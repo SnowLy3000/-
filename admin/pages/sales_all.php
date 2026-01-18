@@ -4,16 +4,15 @@ require_once __DIR__ . '/../../includes/db.php';
 require_once __DIR__ . '/../../includes/perms.php';
 
 require_auth();
-
-// ЗАМЕНЯЕМ старую проверку на новую систему прав
 require_role('view_sales');
 
-function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
+if (!function_exists('h')) {
+    function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
+}
 
 /* ================= ФИЛЬТРЫ ================= */
 $from = $_GET['from'] ?? date('Y-m-01');
 $to   = $_GET['to']   ?? date('Y-m-d');
-
 $userFilter   = (int)($_GET['user_id']   ?? 0);
 $branchFilter = (int)($_GET['branch_id'] ?? 0);
 
@@ -24,13 +23,20 @@ $branches = $pdo->query("SELECT id, name FROM branches ORDER BY name")->fetchAll
 /* ================= ЗАПРОС ПРОДАЖ ================= */
 $sql = "
     SELECT
-        s.id, s.created_at, s.total_amount, s.payment_type,
+        s.id, s.created_at, s.total_amount, s.payment_type, s.is_returned,
         u.first_name, u.last_name, b.name AS branch_name,
-        (SELECT SUM(si.salary_amount) FROM sale_items si WHERE si.sale_id = s.id) as total_salary
+        c.name as client_name, c.phone as client_phone,
+        (SELECT SUM(si.salary_amount) FROM sale_items si WHERE si.sale_id = s.id AND (si.is_returned = 0 OR si.is_returned IS NULL)) as total_salary,
+        (SELECT COUNT(*) FROM sale_items si 
+         JOIN product_promotions pr ON pr.product_name = si.product_name 
+         WHERE si.sale_id = s.id 
+         AND DATE(s.created_at) BETWEEN pr.start_date AND pr.end_date) as promo_count
     FROM sales s
     JOIN users u     ON u.id = s.user_id
     JOIN branches b  ON b.id = s.branch_id
+    LEFT JOIN clients c ON c.id = s.client_id
     WHERE s.created_at BETWEEN :from AND :to
+      AND EXISTS (SELECT 1 FROM sale_items WHERE sale_id = s.id)
 ";
 
 $params = [
@@ -38,15 +44,8 @@ $params = [
     ':to'   => $to   . ' 23:59:59',
 ];
 
-if ($userFilter) {
-    $sql .= " AND s.user_id = :uid";
-    $params[':uid'] = $userFilter;
-}
-
-if ($branchFilter) {
-    $sql .= " AND s.branch_id = :bid";
-    $params[':bid'] = $branchFilter;
-}
+if ($userFilter) { $sql .= " AND s.user_id = :uid"; $params[':uid'] = $userFilter; }
+if ($branchFilter) { $sql .= " AND s.branch_id = :bid"; $params[':bid'] = $branchFilter; }
 
 $sql .= " ORDER BY s.created_at DESC";
 
@@ -57,152 +56,135 @@ $sales = $stmt->fetchAll();
 // Подсчет итогов
 $grandTotal = 0;
 $grandSalary = 0;
+$promoSalesCount = 0;
+
 foreach($sales as $s) {
-    $grandTotal += (float)($s['total_amount'] ?? 0);
-    $grandSalary += (float)($s['total_salary'] ?? 0);
+    if (!$s['is_returned']) {
+        $grandTotal += (float)($s['total_amount'] ?? 0);
+        $grandSalary += (float)($s['total_salary'] ?? 0);
+        if ($s['promo_count'] > 0) $promoSalesCount++;
+    }
 }
 ?>
 
 <style>
-    .report-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; align-items: end; }
-    .st-input { 
-        width: 100%; height: 44px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); 
-        border-radius: 12px; padding: 0 12px; color: #fff; outline: none; box-sizing: border-box; font-size: 14px;
-        transition: 0.3s;
-    }
-    .st-input:focus { border-color: #785aff; background: rgba(120, 90, 255, 0.05); }
+    .sales-container { font-family: 'Inter', sans-serif; color: #fff; max-width: 1300px; margin: 0 auto; }
     
-    .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 20px; }
-    .stats-card { 
-        background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%); 
-        border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 24px; 
+    /* СТИЛЬНЫЕ ФИЛЬТРЫ */
+    .filter-bar { 
+        background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); 
+        border-radius: 24px; padding: 20px; margin-bottom: 25px;
     }
-    .stats-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.4); font-weight: 700; }
-    .stats-val { font-size: 28px; font-weight: 800; color: #fff; margin-top: 8px; }
-    .salary-val { color: #7CFF6B; text-shadow: 0 0 15px rgba(124, 255, 107, 0.3); }
+    .filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; align-items: flex-end; }
+    .f-label { font-size: 9px; font-weight: 900; color: #41414c; text-transform: uppercase; margin-bottom: 6px; display: block; }
+    .st-input { height: 40px; background: #0b0b12; border: 1px solid #1f1f23; border-radius: 12px; color: #fff; padding: 0 12px; font-size: 13px; outline: none; transition: 0.2s; }
+    .st-input:focus { border-color: #785aff; }
+    .btn-apply { height: 40px; background: #785aff; color: #fff; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; }
 
-    .sales-table { width: 100%; border-collapse: collapse; }
-    .sales-table th { text-align: left; padding: 16px; font-size: 10px; text-transform: uppercase; color: rgba(255,255,255,0.3); border-bottom: 1px solid rgba(255,255,255,0.1); letter-spacing: 1px; }
-    .sales-table td { padding: 16px; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 14px; }
-    .sales-table tr:hover td { background: rgba(120, 90, 255, 0.02); }
-    
-    .badge-pay { padding: 6px 12px; border-radius: 10px; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; gap: 5px; }
-    
-    .btn-view { 
-        background: rgba(255, 255, 255, 0.05); color: #fff; padding: 8px 14px; 
-        border-radius: 10px; text-decoration: none; font-size: 13px; border: 1px solid rgba(255,255,255,0.1);
-        transition: 0.2s;
-    }
-    .btn-view:hover { background: #fff; color: #000; }
+    /* КАРТОЧКИ ИТОГОВ */
+    .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }
+    .stat-box { background: #0f0f13; border: 1px solid #1f1f23; border-radius: 20px; padding: 20px; position: relative; }
+    .stat-box span { font-size: 9px; font-weight: 800; color: #82828e; text-transform: uppercase; letter-spacing: 1px; }
+    .stat-box b { font-size: 24px; display: block; margin-top: 5px; letter-spacing: -1px; }
 
-    .filter-btn {
-        background: #785aff; color: #fff; border: none; border-radius: 12px; height: 44px; 
-        font-weight: 700; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 15px rgba(120, 90, 255, 0.3);
-    }
-    .filter-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(120, 90, 255, 0.4); }
+    /* ТАБЛИЦА ПРОДАЖ */
+    .table-wrap { background: #0b0b12; border: 1px solid #1f1f23; border-radius: 24px; overflow: hidden; }
+    .sales-t { width: 100%; border-collapse: collapse; }
+    .sales-t th { padding: 15px; text-align: left; font-size: 9px; text-transform: uppercase; color: #41414c; background: #16161a; }
+    .sales-t td { padding: 15px; border-bottom: 1px solid #16161a; font-size: 13px; vertical-align: middle; }
+    .sales-t tr:hover { background: rgba(120, 90, 255, 0.02); }
+
+    .badge-promo { display: inline-block; padding: 2px 6px; background: rgba(255, 75, 43, 0.1); color: #ff4b2b; border-radius: 4px; font-size: 9px; font-weight: 900; margin-bottom: 4px; }
+    .badge-client { font-size: 11px; color: #b866ff; font-weight: 700; display: block; margin-top: 3px; }
+    .ret-row { background: rgba(255, 68, 68, 0.02) !important; opacity: 0.6; }
+    .price-strike { text-decoration: line-through; color: #ff4b2b; opacity: 0.5; }
 </style>
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-    <div>
-        <h1 style="margin:0; font-size: 28px; font-weight: 800;">🧾 Журнал продаж</h1>
-        <p class="muted" style="margin: 5px 0 0 0;">Полная история операций и начислений</p>
+<div class="sales-container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+        <div>
+            <h1 style="margin:0; font-size: 24px; font-weight: 900;">📜 Журнал операций</h1>
+            <p style="margin:0; font-size: 14px; opacity: 0.4;">Детальный мониторинг всех кассовых чеков</p>
+        </div>
+        <div style="font-size: 12px; font-weight: 700; background: rgba(120, 90, 255, 0.1); color: #785aff; padding: 8px 15px; border-radius: 10px;">
+            Всего: <?= count($sales) ?> чеков
+        </div>
     </div>
-</div>
 
-<div class="card" style="margin-bottom: 20px; border-radius: 24px;">
-    <form method="get">
+    <form class="filter-bar" method="GET">
         <input type="hidden" name="page" value="sales_all">
-        <div class="report-grid">
-            <div>
-                <label class="stats-label" style="margin-bottom:8px; display:block;">Период от</label>
-                <input type="date" name="from" class="st-input" value="<?= h($from) ?>">
-            </div>
-            <div>
-                <label class="stats-label" style="margin-bottom:8px; display:block;">Период до</label>
-                <input type="date" name="to" class="st-input" value="<?= h($to) ?>">
-            </div>
-            <div>
-                <label class="stats-label" style="margin-bottom:8px; display:block;">Локация</label>
-                <select name="branch_id" class="st-input">
-                    <option value="0">Все филиалы</option>
-                    <?php foreach ($branches as $b): ?>
-                        <option value="<?= $b['id'] ?>" <?= $b['id']==$branchFilter?'selected':'' ?>><?= h($b['name']) ?></option>
-                    <?php endforeach; ?>
+        <div class="filter-grid">
+            <div class="f-item"><label class="f-label">Период ОТ</label><input type="date" name="from" class="st-input" value="<?= h($from) ?>"></div>
+            <div class="f-item"><label class="f-label">Период ДО</label><input type="date" name="to" class="st-input" value="<?= h($to) ?>"></div>
+            <div class="f-item">
+                <label class="f-label">Филиал</label>
+                <select name="branch_id" class="st-input" style="width:100%">
+                    <option value="0">Все локации</option>
+                    <?php foreach ($branches as $b): ?><option value="<?= $b['id'] ?>" <?= $b['id']==$branchFilter?'selected':'' ?>><?= h($b['name']) ?></option><?php endforeach; ?>
                 </select>
             </div>
-            <div>
-                <label class="stats-label" style="margin-bottom:8px; display:block;">Сотрудник</label>
-                <select name="user_id" class="st-input">
-                    <option value="0">Все сотрудники</option>
-                    <?php foreach ($users as $u): ?>
-                        <option value="<?= $u['id'] ?>" <?= $u['id']==$userFilter?'selected':'' ?>><?= h($u['last_name'].' '.$u['first_name']) ?></option>
-                    <?php endforeach; ?>
+            <div class="f-item">
+                <label class="f-label">Продавец</label>
+                <select name="user_id" class="st-input" style="width:100%">
+                    <option value="0">Весь персонал</option>
+                    <?php foreach ($users as $u): ?><option value="<?= $u['id'] ?>" <?= $u['id']==$userFilter?'selected':'' ?>><?= h($u['last_name'].' '.$u['first_name']) ?></option><?php endforeach; ?>
                 </select>
             </div>
-            <button class="filter-btn">Применить фильтр</button>
+            <button class="btn-apply">ОБНОВИТЬ</button>
         </div>
     </form>
-</div>
 
-<div class="stats-container">
-    <div class="stats-card">
-        <div class="stats-label">Общий оборот</div>
-        <div class="stats-val"><?= number_format((float)$grandTotal, 2, '.', ' ') ?> L</div>
+    <div class="stats-row">
+        <div class="stat-box"><span>Общая выручка</span><b><?= number_format((float)$grandTotal, 0, '.', ' ') ?> L</b></div>
+        <div class="stat-box"><span>Бонусы персонала</span><b style="color: #7CFF6B;">+<?= number_format((float)$grandSalary, 2, '.', ' ') ?> L</b></div>
+        <div class="stat-box"><span>Акционные чеки</span><b style="color: #ff4b2b;"><?= $promoSalesCount ?></b></div>
+        <div class="stat-box"><span>Средний чек</span><b><?= count($sales) ? number_format($grandTotal / count($sales), 0, '.', ' ') : 0 ?> L</b></div>
     </div>
-    <div class="stats-card">
-        <div class="stats-label">Начислено бонусов</div>
-        <div class="stats-val salary-val">+ <?= number_format((float)$grandSalary, 2, '.', ' ') ?> L</div>
-    </div>
-</div>
 
-<div class="card" style="padding: 0; overflow: hidden; border-radius: 24px;">
-    <div style="overflow-x: auto;">
-        <table class="sales-table">
+    <div class="table-wrap">
+        <table class="sales-t">
             <thead>
                 <tr>
-                    <th>Дата / Время</th>
-                    <th>Сотрудник</th>
-                    <th>Филиал</th>
-                    <th>Тип оплаты</th>
-                    <th>Выручка</th>
-                    <th style="color: #7CFF6B;">Бонус</th>
-                    <th style="text-align: right;">Детали</th>
+                    <th>ID / Время</th>
+                    <th>Персонал / Клиент</th>
+                    <th>Локация</th>
+                    <th>Оплата</th>
+                    <th style="text-align: right;">Выручка</th>
+                    <th style="text-align: right;">Бонус</th>
+                    <th style="text-align: center;">Акт</th>
                 </tr>
             </thead>
             <tbody>
-                <?php if (!$sales): ?>
-                    <tr><td colspan="7" style="text-align: center; padding: 60px; opacity: 0.3;">За выбранный период данных нет</td></tr>
-                <?php else: ?>
-                    <?php foreach ($sales as $s): ?>
-                    <tr>
-                        <td style="font-weight: 600; white-space: nowrap;">
-                            <?= date('d.m.Y', strtotime($s['created_at'])) ?>
-                            <span class="muted" style="font-weight: 400; font-size: 12px; margin-left: 5px;"><?= date('H:i', strtotime($s['created_at'])) ?></span>
-                        </td>
-                        <td>
-                            <div style="display:flex; align-items:center; gap:8px;">
-                                <div style="width:24px; height:24px; background:rgba(120,90,255,0.2); border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:10px; color:#b866ff; font-weight:800;">
-                                    <?= mb_substr($s['first_name'],0,1) ?>
-                                </div>
-                                <b><?= h($s['last_name']) ?></b>
-                            </div>
-                        </td>
-                        <td><span class="muted"><?= h($s['branch_name']) ?></span></td>
-                        <td>
-                            <?php if ($s['payment_type'] === 'card'): ?>
-                                <span class="badge-pay" style="background: rgba(0, 153, 255, 0.1); color: #0099ff;">💳 Карта</span>
-                            <?php else: ?>
-                                <span class="badge-pay" style="background: rgba(255, 187, 51, 0.1); color: #ffbb33;">💵 Наличные</span>
-                            <?php endif; ?>
-                        </td>
-                        <td><b style="font-size: 15px;"><?= number_format((float)($s['total_amount'] ?? 0), 2, '.', ' ') ?> L</b></td>
-                        <td><span style="color: #7CFF6B; font-weight: 700;">+<?= number_format((float)($s['total_salary'] ?? 0), 2, '.', ' ') ?></span></td>
-                        <td style="text-align: right;">
-                            <a class="btn-view" href="/admin/index.php?page=sale_view&sale_id=<?= $s['id'] ?>">Просмотр</a>
-                        </td>
-                    </tr>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                <?php foreach ($sales as $s): 
+                    $isRet = (int)$s['is_returned'] === 1;
+                ?>
+                <tr class="<?= $isRet ? 'ret-row' : '' ?>">
+                    <td>
+                        <div style="font-weight: 900; color: #fff;">#<?= $s['id'] ?></div>
+                        <div style="font-size: 11px; opacity: 0.3;"><?= date('H:i', strtotime($s['created_at'])) ?> / <?= date('d.m.y', strtotime($s['created_at'])) ?></div>
+                    </td>
+                    <td>
+                        <div style="font-weight: 600;"><?= h($s['last_name']) ?> <?= h(mb_substr($s['first_name'],0,1)) ?>.</div>
+                        <?php if($s['client_name']): ?>
+                            <span class="badge-client">👤 <?= h($s['client_name']) ?></span>
+                        <?php endif; ?>
+                    </td>
+                    <td style="opacity: 0.5;"><?= h($s['branch_name']) ?></td>
+                    <td style="font-size: 11px; font-weight: 700; opacity: 0.8;"><?= $s['payment_type'] === 'card' ? '💳 КАРТА' : '💵 НАЛИЧНЫЕ' ?></td>
+                    <td style="text-align: right;">
+                        <?php if($s['promo_count'] > 0): ?><span class="badge-promo">АКЦИЯ</span><br><?php endif; ?>
+                        <b class="<?= $isRet ? 'price-strike' : '' ?>" style="font-size: 15px;">
+                            <?= number_format((float)$s['total_amount'], 0, '.', ' ') ?> L
+                        </b>
+                    </td>
+                    <td style="text-align: right; color: #7CFF6B; font-weight: 800;">
+                        +<?= number_format((float)$s['total_salary'], 2, '.', ' ') ?>
+                    </td>
+                    <td style="text-align: center;">
+                        <a href="index.php?page=sale_view&sale_id=<?= $s['id'] ?>" style="text-decoration: none; font-size: 18px; filter: grayscale(1); opacity: 0.5;">🔍</a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>

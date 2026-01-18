@@ -4,9 +4,12 @@ require_once __DIR__ . '/../../includes/db.php';
 require_once __DIR__ . '/../../includes/perms.php';
 
 require_auth();
-
-// Доступ по праву общей KPI аналитики
 require_role('view_kpi_general');
+
+// Функция безопасности (защита от XSS), если она не определена глобально
+if (!function_exists('h')) {
+    function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
+}
 
 $from = $_GET['from'] ?? date('Y-m-01');
 $to   = $_GET['to']   ?? date('Y-m-d');
@@ -16,21 +19,20 @@ $branchId = (int)($_GET['branch_id'] ?? 0);
 $branches = $pdo->query("SELECT id, name FROM branches ORDER BY name")->fetchAll();
 
 /* === ДАННЫЕ ДЛЯ ГРАФИКА === */
-// ИСПРАВЛЕНО: Мы считаем сумму из sale_items по формуле, так как колонки total_amount в si нет
 $sql = "
 SELECT 
     DATE(s.created_at) as day,
-    SUM(CEIL(si.price - (si.price * si.discount / 100)) * si.quantity) AS total_sum,
+    SUM(s.total_amount) AS total_sum,
     COUNT(DISTINCT s.id) AS checks
 FROM sales s
-JOIN sale_items si ON si.sale_id = s.id
 WHERE s.total_amount > 0 
   AND DATE(s.created_at) BETWEEN ? AND ?
 ";
 
 $params = [$from, $to];
 
-if ($branchId) {
+// Исправленный фильтр локации
+if ($branchId > 0) {
     $sql .= " AND s.branch_id = ?";
     $params[] = $branchId;
 }
@@ -42,7 +44,6 @@ $stmt->execute($params);
 $data = $stmt->fetchAll();
 
 $labels = []; $sums = []; $checks = [];
-
 foreach ($data as $r) {
     $labels[] = date('d.m', strtotime($r['day']));
     $sums[]   = (float)$r['total_sum'];
@@ -53,66 +54,59 @@ foreach ($data as $r) {
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
-    .report-filters { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; margin-top: 15px; }
-    .st-input { 
-        height: 42px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); 
-        border-radius: 12px; padding: 0 12px; color: #fff; outline: none; font-size: 14px; transition: 0.3s;
+    .analytics-shell { font-family: 'Inter', sans-serif; color: #fff; max-width: 1200px; margin: 0 auto; }
+    .filter-row { 
+        background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); 
+        padding: 15px 20px; border-radius: 20px; display: flex; gap: 12px; align-items: flex-end; margin-bottom: 25px;
     }
-    .st-input:focus { border-color: #785aff; background: rgba(120, 90, 255, 0.05); }
-    .chart-container { 
-        padding: 30px; background: rgba(255,255,255,0.02); border-radius: 24px; 
-        border: 1px solid rgba(255,255,255,0.05); margin-top: 20px;
+    .f-item { display: flex; flex-direction: column; gap: 5px; flex: 1; }
+    .f-item label { font-size: 9px; font-weight: 800; color: rgba(255,255,255,0.3); text-transform: uppercase; }
+    .st-input { height: 38px; background: #0b0b12; border: 1px solid #333; border-radius: 10px; color: #fff; padding: 0 12px; font-size: 13px; outline: none; }
+    .chart-box { 
+        background: #0f0f13; border: 1px solid #1f1f23; border-radius: 28px; 
+        padding: 30px; position: relative; min-height: 450px;
     }
-    .chart-title-box { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-    .btn-update { background: #785aff; color: #fff; border: none; height: 42px; padding: 0 30px; border-radius: 12px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-    .btn-update:hover { background: #6344d4; transform: translateY(-2px); }
+    .btn-update { background: #785aff; color: #fff; border: none; height: 38px; padding: 0 20px; border-radius: 10px; font-weight: 700; cursor: pointer; }
 </style>
 
-<div class="chart-title-box">
-    <div>
-        <h2 style="margin:0">📈 Аналитика сети</h2>
-        <p class="muted" style="margin:5px 0 0 0;">Динамика выручки и количество транзакций</p>
+<div class="analytics-shell">
+    <div style="margin-bottom: 25px;">
+        <h1 style="margin:0; font-size: 24px; font-weight: 900;">📈 Аналитика динамики</h1>
+        <p style="margin:5px 0 0 0; font-size: 13px; opacity: 0.4;">Сравнение выручки и покупательской активности</p>
     </div>
-</div>
 
-<div class="card" style="border-radius: 20px; margin-bottom: 20px;">
-    <form method="get" class="report-filters">
+    <form class="filter-row" method="GET">
         <input type="hidden" name="page" value="report_sales_chart">
-        
-        <div>
-            <label class="muted" style="font-size: 10px; display:block; margin-bottom:5px; text-transform: uppercase;">Начало</label>
-            <input type="date" name="from" class="st-input" value="<?= $from ?>">
+        <div class="f-item">
+            <label>Начало</label>
+            <input type="date" name="from" class="st-input" value="<?= h($from) ?>">
         </div>
-
-        <div>
-            <label class="muted" style="font-size: 10px; display:block; margin-bottom:5px; text-transform: uppercase;">Конец</label>
-            <input type="date" name="to" class="st-input" value="<?= $to ?>">
+        <div class="f-item">
+            <label>Конец</label>
+            <input type="date" name="to" class="st-input" value="<?= h($to) ?>">
         </div>
-
-        <div>
-            <label class="muted" style="font-size: 10px; display:block; margin-bottom:5px; text-transform: uppercase;">Филиал</label>
-            <select name="branch_id" class="st-input">
-                <option value="0">Все локации</option>
+        <div class="f-item" style="flex: 2;">
+            <label>Локация</label>
+            <select name="branch_id" class="st-input" style="width: 100%;">
+                <option value="0">Все филиалы</option>
                 <?php foreach ($branches as $b): ?>
-                    <option value="<?= $b['id'] ?>" <?= $branchId==$b['id']?'selected':'' ?>><?= htmlspecialchars($b['name']) ?></option>
+                    <option value="<?= (int)$b['id'] ?>" <?= $branchId == $b['id'] ? 'selected' : '' ?>><?= h($b['name']) ?></option>
                 <?php endforeach; ?>
             </select>
         </div>
-
-        <button type="submit" class="btn-update">Обновить данные</button>
+        <button type="submit" class="btn-update">Применить</button>
     </form>
-</div>
 
-<div class="chart-container">
-    <canvas id="salesChart" height="110"></canvas>
+    <div class="chart-box">
+        <canvas id="mainSalesChart"></canvas>
+    </div>
 </div>
 
 <script>
-const ctx = document.getElementById('salesChart').getContext('2d');
-
-const fillGradient = ctx.createLinearGradient(0, 0, 0, 400);
-fillGradient.addColorStop(0, 'rgba(120, 90, 255, 0.2)');
-fillGradient.addColorStop(1, 'rgba(120, 90, 255, 0)');
+const ctx = document.getElementById('mainSalesChart').getContext('2d');
+const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, 'rgba(120, 90, 255, 0.3)');
+gradient.addColorStop(1, 'rgba(120, 90, 255, 0)');
 
 new Chart(ctx, {
     type: 'line',
@@ -123,56 +117,42 @@ new Chart(ctx, {
                 label: 'Выручка (L)',
                 data: <?= json_encode($sums) ?>,
                 borderColor: '#785aff',
-                backgroundColor: fillGradient,
+                backgroundColor: gradient,
                 fill: true,
                 tension: 0.4,
-                borderWidth: 3,
+                borderWidth: 4,
                 yAxisID: 'y',
-                pointRadius: 4,
-                pointHoverRadius: 6,
-                pointBackgroundColor: '#785aff'
+                pointRadius: 0,
+                pointHoverRadius: 6
             },
             {
                 label: 'Чеки (шт)',
                 data: <?= json_encode($checks) ?>,
-                borderColor: '#4ade80',
+                borderColor: 'rgba(124, 255, 107, 0.5)',
+                borderDash: [5, 5],
                 fill: false,
                 tension: 0.4,
                 borderWidth: 2,
-                borderDash: [5, 5],
                 yAxisID: 'y1',
-                pointRadius: 3
+                pointRadius: 0
             }
         ]
     },
     options: {
         responsive: true,
-        interaction: { mode: 'index', intersect: false },
+        maintainAspectRatio: false,
         plugins: {
             legend: {
+                display: true,
                 position: 'top',
-                labels: { color: '#fff', font: { family: 'Inter', size: 12 }, padding: 20 }
+                align: 'end',
+                labels: { color: '#82828e', font: { size: 10, weight: '700' }, usePointStyle: true, padding: 20 }
             }
         },
         scales: {
-            x: {
-                grid: { color: 'rgba(255,255,255,0.05)', drawBorder: false },
-                ticks: { color: 'rgba(255,255,255,0.5)' }
-            },
-            y: {
-                type: 'linear',
-                display: true,
-                position: 'left',
-                grid: { color: 'rgba(255,255,255,0.05)', drawBorder: false },
-                ticks: { color: '#785aff' }
-            },
-            y1: {
-                type: 'linear',
-                display: true,
-                position: 'right',
-                grid: { drawOnChartArea: false },
-                ticks: { color: '#4ade80' }
-            }
+            x: { grid: { display: false }, ticks: { color: '#41414c' } },
+            y: { position: 'left', grid: { color: 'rgba(255,255,255,0.03)' }, ticks: { color: '#785aff' } },
+            y1: { position: 'right', grid: { display: false }, ticks: { color: '#7CFF6B' } }
         }
     }
 });

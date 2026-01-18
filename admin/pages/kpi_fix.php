@@ -4,15 +4,13 @@ require_once __DIR__ . '/../../includes/db.php';
 require_once __DIR__ . '/../../includes/perms.php';
 
 require_auth();
-
-// Доступ только для высшего руководства
 require_role('manage_kpi_plans'); 
 
 if (!function_exists('h')) {
     function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 }
 
-/* --- ЗАГРУЗКА НАСТРОЕК БОНУСОВ --- */
+/* --- НАСТРОЙКИ --- */
 $settings = [];
 $stmt = $pdo->query("SELECT skey, svalue FROM settings WHERE skey LIKE 'kpi_bonus_%'");
 foreach ($stmt as $row) { $settings[$row['skey']] = (float)$row['svalue']; }
@@ -22,11 +20,9 @@ $month    = $_GET['month'] ?? date('Y-m');
 
 $from = $month . '-01 00:00:00';
 $to   = date('Y-m-t 23:59:59', strtotime($from));
-
-/* --- филиалы --- */
 $branches = $pdo->query("SELECT id,name FROM branches ORDER BY name")->fetchAll();
 
-/* --- проверка фиксации --- */
+/* --- ПРОВЕРКА ФИКСАЦИИ --- */
 $isFixed = false;
 $fixedData = null;
 if ($branchId) {
@@ -36,21 +32,36 @@ if ($branchId) {
     $isFixed = (bool)$fixedData;
 }
 
-/* --- расчет текущих цифр --- */
-$plan = 0; $fact = 0; $kpi = 0;
+/* --- РАСЧЕТ ТЕКУЩИХ ЦИФР --- */
+$plan = 0; $fact = 0; $kpi = 0; $promoFact = 0;
 if ($branchId) {
+    // План
     $stmt = $pdo->prepare("SELECT plan_amount FROM kpi_plans WHERE branch_id = ? AND DATE_FORMAT(month_date,'%Y-%m') = ?");
     $stmt->execute([$branchId, $month]);
     $plan = (float)($stmt->fetchColumn() ?: 0);
 
-    $stmt = $pdo->prepare("SELECT COALESCE(SUM(total_amount),0) FROM sales WHERE branch_id = ? AND created_at BETWEEN ? AND ?");
+    // Общая выручка
+    $stmt = $pdo->prepare("SELECT COALESCE(SUM(total_amount),0) FROM sales WHERE branch_id = ? AND created_at BETWEEN ? AND ? AND is_returned = 0");
     $stmt->execute([$branchId, $from, $to]);
     $fact = (float)$stmt->fetchColumn();
+
+    // ВЫРУЧКА ПО АКЦИЯМ (Новое!)
+    $stmt = $pdo->prepare("
+        SELECT COALESCE(SUM(s.total_amount),0) 
+        FROM sales s
+        WHERE s.branch_id = ? AND s.created_at BETWEEN ? AND ? AND s.is_returned = 0
+        AND EXISTS (
+            SELECT 1 FROM sale_items si 
+            JOIN product_promotions pr ON pr.product_name = si.product_name 
+            WHERE si.sale_id = s.id AND DATE(s.created_at) BETWEEN pr.start_date AND pr.end_date
+        )
+    ");
+    $stmt->execute([$branchId, $from, $to]);
+    $promoFact = (float)$stmt->fetchColumn();
 
     $kpi = ($plan > 0) ? ($fact / $plan) * 100 : 0;
 }
 
-/* --- Бонусная логика --- */
 $bonusPercent = 0;
 if ($kpi >= 130) $bonusPercent = $settings['kpi_bonus_130'] ?? 30;
 elseif ($kpi >= 120) $bonusPercent = $settings['kpi_bonus_120'] ?? 20;
@@ -58,104 +69,109 @@ elseif ($kpi >= 110) $bonusPercent = $settings['kpi_bonus_110'] ?? 10;
 elseif ($kpi >= 100) $bonusPercent = $settings['kpi_bonus_100'] ?? 0;
 
 $bonusAmount = $fact * ($bonusPercent / 100);
+$promoShare = ($fact > 0) ? ($promoFact / $fact) * 100 : 0;
 ?>
 
 <style>
-    .fix-container { max-width: 900px; margin: 0 auto; }
-    .st-input { height: 48px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 0 15px; color: #fff; outline: none; transition: 0.3s; }
-    .st-input:focus { border-color: #785aff; background: rgba(120, 90, 255, 0.05); }
+    .fix-container { max-width: 900px; margin: 0 auto; font-family: 'Inter', sans-serif; color: #fff; }
     
-    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
-    .data-item { 
-        background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%); 
-        padding: 25px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.08); 
-        text-align: center;
+    /* Компактный фильтр */
+    .filter-bar { 
+        background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); 
+        padding: 15px 25px; border-radius: 20px; display: flex; gap: 12px; align-items: flex-end; margin-bottom: 25px;
     }
-    .data-item label { display: block; font-size: 10px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 10px; font-weight: 800; letter-spacing: 1px; }
-    .data-item b { font-size: 24px; color: #fff; font-weight: 900; }
+    .st-input { height: 38px; background: #0b0b12; border: 1px solid #333; border-radius: 10px; color: #fff; padding: 0 12px; font-size: 13px; outline: none; }
+    
+    /* Сетка показателей */
+    .data-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 25px; }
+    .data-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 15px; border-radius: 18px; text-align: center; }
+    .data-card label { display: block; font-size: 9px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 5px; font-weight: 800; }
+    .data-card b { font-size: 20px; font-weight: 900; }
 
-    .lock-card { 
-        background: rgba(120, 90, 255, 0.03); border: 2px dashed rgba(120, 90, 255, 0.2); 
-        border-radius: 32px; padding: 40px; text-align: center; position: relative;
+    /* Карточка статуса */
+    .status-card { 
+        background: rgba(120, 90, 255, 0.02); border: 1px dashed rgba(120, 90, 255, 0.2); 
+        border-radius: 24px; padding: 30px; text-align: center; 
     }
-    .fixed-badge { 
-        background: #4ade80; color: #064e3b; padding: 6px 20px; border-radius: 10px; 
-        font-weight: 900; font-size: 12px; display: inline-block; margin-bottom: 20px;
-        box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
-    }
-    .status-icon { font-size: 48px; margin-bottom: 20px; display: block; }
-    
     .btn-fix { 
-        width: 100%; height: 60px; font-size: 16px; font-weight: 800; margin-top: 25px; 
-        background: linear-gradient(90deg, #00c851, #007e33); color: #fff; border: none; 
-        border-radius: 18px; cursor: pointer; transition: 0.3s; box-shadow: 0 10px 20px rgba(0, 200, 81, 0.2);
+        width: 100%; height: 50px; background: #2ecc71; color: #fff; border: none; 
+        border-radius: 14px; font-weight: 800; cursor: pointer; transition: 0.2s; margin-top: 20px;
     }
-    .btn-fix:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0, 200, 81, 0.3); }
+    .btn-fix:hover { background: #27ae60; transform: translateY(-2px); }
 </style>
 
 <div class="fix-container">
-    <div class="card" style="border-radius: 28px; padding: 35px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-            <div>
-                <h1 style="margin:0; font-size: 28px;">🔒 Фиксация периода</h1>
-                <p class="muted" style="margin-top: 5px;">Закрытие финансовой отчетности и подтверждение премий</p>
-            </div>
-            <form method="get" style="display:flex; gap:12px; flex-wrap:wrap;">
-                <input type="hidden" name="page" value="kpi_fix">
-                <select name="branch_id" class="st-input" required style="min-width: 220px;">
-                    <option value="">Выберите филиал</option>
-                    <?php foreach ($branches as $b): ?>
-                        <option value="<?= $b['id'] ?>" <?= $branchId==$b['id']?'selected':'' ?>><?= h($b['name']) ?></option>
-                    <?php endforeach; ?>
-                </select>
-                <input type="month" name="month" class="st-input" value="<?= h($month) ?>">
-                <button class="btn" style="height: 48px; padding: 0 25px;">Проверить итоги</button>
-            </form>
-        </div>
+    <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 12px;">
+        <div style="width: 40px; height: 40px; background: rgba(120,90,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px;">🔒</div>
+        <h1 style="margin:0; font-size: 22px; font-weight: 800;">Фиксация периода</h1>
     </div>
 
+    <form class="filter-bar">
+        <input type="hidden" name="page" value="kpi_fix">
+        <div style="flex: 2; display: flex; flex-direction: column; gap: 5px;">
+            <label style="font-size: 9px; opacity: 0.4;">ФИЛИАЛ</label>
+            <select name="branch_id" class="st-input" required style="width: 100%;">
+                <option value="">Выберите локацию...</option>
+                <?php foreach ($branches as $b): ?>
+                    <option value="<?= $b['id'] ?>" <?= $branchId==$b['id']?'selected':'' ?>><?= h($b['name']) ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 5px;">
+            <label style="font-size: 9px; opacity: 0.4;">МЕСЯЦ</label>
+            <input type="month" name="month" class="st-input" value="<?= h($month) ?>">
+        </div>
+        <button class="btn" style="height: 38px; background: #785aff; color: #fff; border: none; padding: 0 20px; border-radius: 10px; font-weight: 700; cursor: pointer;">ПРОВЕРИТЬ</button>
+    </form>
+
     <?php if ($branchId): ?>
-        
         <div class="data-grid">
-            <div class="data-item"><label>План на месяц</label><b><?= number_format($plan, 0, '.', ' ') ?> L</b></div>
-            <div class="data-item"><label>Итоговая выручка</label><b><?= number_format($fact, 0, '.', ' ') ?> L</b></div>
-            <div class="data-item"><label>% Выполнения</label><b style="color: #b866ff;"><?= number_format($kpi, 1) ?>%</b></div>
-            <div class="data-item"><label>Бонусный фонд</label><b style="color: #4ade80;"><?= number_format($bonusAmount, 0, '.', ' ') ?> L</b></div>
+            <div class="data-card"><label>План</label><b><?= number_format($plan, 0, '.', ' ') ?> L</b></div>
+            <div class="data-card"><label>Факт</label><b><?= number_format($fact, 0, '.', ' ') ?> L</b></div>
+            <div class="data-card"><label>% Выполнения</label><b style="color: #b866ff;"><?= number_format($kpi, 1) ?>%</b></div>
+            <div class="data-card" style="border-color: rgba(255, 75, 43, 0.2);">
+                <label style="color: #ff4b2b;">Доля Акций</label>
+                <b style="color: #ff4b2b;"><?= number_format($promoShare, 1) ?>%</b>
+            </div>
+            <div class="data-card" style="border-color: rgba(46, 204, 113, 0.2);">
+                <label style="color: #2ecc71;">Бонус фонд</label>
+                <b style="color: #2ecc71;"><?= number_format($bonusAmount, 0, '.', ' ') ?> L</b>
+            </div>
         </div>
 
-        <?php if ($isFixed): ?>
-            <div class="lock-card" style="border-style: solid; border-color: rgba(74, 222, 128, 0.3); background: rgba(74, 222, 128, 0.02);">
-                <span class="status-icon">🛡️</span>
-                <div class="fixed-badge">ЗАРЕГИСТРИРОВАНО</div>
-                <div style="font-size: 22px; font-weight: 900; color: #fff;">Месяц успешно закрыт</div>
-                <div class="muted" style="margin-top: 15px; font-size: 14px;">
-                    Данные за <b><?= h(date('F Y', strtotime($monthDate))) ?></b> заблокированы от изменений.<br>
-                    Фиксация проведена: <?= date('d.m.Y в H:i', strtotime($fixedData['created_at'] ?? $fixedData['fixed_at'])) ?>
-                </div>
-            </div>
-        <?php else: ?>
-            <div class="lock-card">
-                <span class="status-icon">⚠️</span>
-                <h3 style="margin-top:0; font-size: 22px; color: #fff;">Ожидание фиксации</h3>
-                <p class="muted" style="max-width: 500px; margin: 15px auto; font-size: 14px; line-height: 1.6;">
-                    Внимательно проверьте цифры выше. После нажатия на кнопку, результаты этого филиала за текущий месяц будут сохранены в историю и <b>защищены от корректировок</b>.
+<?php if ($isFixed): ?>
+    <div class="status-card" style="border-color: #2ecc71; background: rgba(46, 204, 113, 0.02);">
+        <div style="font-size: 40px; margin-bottom: 10px;">✅</div>
+        <h3 style="margin:0; color: #2ecc71;">Месяц зафиксирован</h3>
+        <p style="font-size: 13px; opacity: 0.5; margin-top: 10px;">
+            <?php 
+                // Проверяем разные возможные ключи даты в базе
+                $dateValue = $fixedData['created_at'] ?? $fixedData['fixed_at'] ?? $fixedData['month_date'] ?? null;
+                $formattedDate = $dateValue ? date('d.m.Y в H:i', strtotime($dateValue)) : 'Дата не указана';
+            ?>
+            Запись создана: <b><?= $formattedDate ?></b><br>
+            Данные защищены от изменений и корректировок.
+        </p>
+    </div>
+<?php else: ?>
+            <div class="status-card">
+                <div style="font-size: 40px; margin-bottom: 10px;">⏳</div>
+                <h3 style="margin:0;">Ожидание подтверждения</h3>
+                <p style="font-size: 13px; opacity: 0.5; margin: 10px auto 0; max-width: 450px;">
+                    Внимание: после нажатия на кнопку данные за <b><?= h($month) ?></b> будут сохранены в архив. 
+                    Убедитесь, что все возвраты проведены, а продажи соответствуют действительности.
                 </p>
                 
-                <form method="post" action="/admin/actions/kpi_fix_save.php" onsubmit="return confirm('Вы уверены? Это действие создаст неизменяемую финансовую запись.')">
+                <form method="post" action="/admin/actions/kpi_fix_save.php" onsubmit="return confirm('Подтвердить окончательный расчет?')">
                     <input type="hidden" name="branch_id" value="<?= $branchId ?>">
                     <input type="hidden" name="month" value="<?= h($month) ?>">
                     <input type="hidden" name="plan" value="<?= $plan ?>">
                     <input type="hidden" name="fact" value="<?= $fact ?>">
                     <input type="hidden" name="kpi" value="<?= $kpi ?>">
-                    <input type="hidden" name="bonus_percent" value="<?= $bonusPercent ?>">
                     <input type="hidden" name="bonus_amount" value="<?= $bonusAmount ?>">
-
-                    <button type="submit" class="btn-fix">
-                        🚀 ЗАФИКСИРОВАТЬ И ЗАКРЫТЬ МЕСЯЦ
-                    </button>
+                    <button type="submit" class="btn-fix">🚀 ПОДТВЕРДИТЬ И ЗАКРЫТЬ МЕСЯЦ</button>
                 </form>
             </div>
         <?php endif; ?>
-
     <?php endif; ?>
 </div>

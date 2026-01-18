@@ -1,105 +1,71 @@
 <?php
-require_once __DIR__ . '/../../includes/auth.php';
+/**
+ * admin/ajax/import_csv.php
+ */
+
+ob_start(); // Перехват случайного вывода
+
 require_once __DIR__ . '/../../includes/db.php';
+require_once __DIR__ . '/../../includes/auth.php';
 require_once __DIR__ . '/../../includes/perms.php';
 
-require_auth();
+if (ob_get_length()) ob_clean(); // Стираем мусор
+header('Content-Type: application/json; charset=utf-8');
 
-if (!has_role('Admin') && !has_role('Owner')) {
-    echo json_encode(['status' => 'error', 'message' => 'Нет прав']);
+if (!is_logged_in() || !has_role('Admin')) {
+    echo json_encode(['status' => 'error', 'message' => 'Доступ запрещен']);
     exit;
-}
-
-// Проверка и добавление колонки price (если вдруг её еще нет)
-try {
-    $pdo->query("SELECT price FROM products LIMIT 1");
-} catch (Exception $e) {
-    $pdo->query("ALTER TABLE products ADD COLUMN price DECIMAL(10,2) DEFAULT 0.00");
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
     $file = $_FILES['file']['tmp_name'];
     $content = file_get_contents($file);
     
-    // Исправляем кодировку (Windows-1251 -> UTF-8)
-    $encoding = mb_detect_encoding($content, ['UTF-8', 'Windows-1251']);
-    if ($encoding !== 'UTF-8') {
-        $content = mb_convert_encoding($content, 'UTF-8', $encoding);
-    }
+    // Автоопределение и исправление кодировки
+    $enc = mb_detect_encoding($content, ['UTF-8', 'Windows-1251']);
+    if ($enc !== 'UTF-8') $content = mb_convert_encoding($content, 'UTF-8', $enc);
     
-    $separator = ",";
+    // Определение разделителя
     $lines = explode("\n", $content);
-    $checkLine = $lines[3] ?? $lines[2] ?? ''; 
-    if (strpos($checkLine, ';') !== false) $separator = ";";
+    $separator = (strpos($lines[0] ?? '', ';') !== false) ? ";" : ",";
 
     $stream = fopen('php://temp', 'r+');
     fwrite($stream, $content);
     rewind($stream);
     
-    $imported = 0; $updated = 0; $skipped = 0;
+    $updated = 0; $created = 0; $row_count = 0;
+    $pdo->beginTransaction();
 
-    // Пропускаем шапку (3 строки)
-    fgetcsv($stream, 2000, $separator); 
-    fgetcsv($stream, 2000, $separator); 
-    fgetcsv($stream, 2000, $separator);
+    try {
+        while (($data = fgetcsv($stream, 1000, $separator)) !== FALSE) {
+            $row_count++;
+            if ($row_count === 1) continue; // Пропуск заголовка
 
-    while (($data = fgetcsv($stream, 2000, $separator)) !== FALSE) {
-        if (count($data) < 9) continue;
+            $name = trim($data[0] ?? '');
+            $priceRaw = str_replace([' ', ','], ['', '.'], $data[1] ?? '0');
+            $price = (float)$priceRaw;
 
-        $name    = trim($data[3] ?? ''); 
-        $percent = (float)str_replace(',', '.', $data[5] ?? 0);
-        $price   = (float)str_replace(',', '.', $data[8] ?? 0);
+            if (empty($name)) continue;
 
-        // --- БЛОК ФИЛЬТРАЦИИ ---
-        if (empty($name) || mb_strlen($name) < 3) continue;
+            // Поиск дубликата (без учета регистра)
+            $stmt = $pdo->prepare("SELECT id FROM products WHERE LOWER(name) = LOWER(?) LIMIT 1");
+            $stmt->execute([$name]);
+            $product = $stmt->fetch();
 
-        // Список стоп-слов (исправлено: закрыты кавычки)
-        $stopWords = [
-            'Moldcell Cartela', 
-            'Orange Cartela', 
-            'Unite Cartela', 
-        ];
-
-        $shouldSkip = false;
-        foreach ($stopWords as $word) {
-            if (mb_stripos($name, $word) !== false) {
-                $shouldSkip = true;
-                break;
-            }
-        }
-        
-        if ($shouldSkip || $price <= 0) continue;
-        // --- КОНЕЦ ФИЛЬТРАЦИИ ---
-
-        // Поиск категории
-        $stmt = $pdo->prepare("SELECT id FROM salary_categories WHERE percent = ? AND is_active = 1 LIMIT 1");
-        $stmt->execute([$percent]);
-        $cat = $stmt->fetch();
-
-        if (!$cat) { $skipped++; continue; }
-
-        // Поиск и сохранение товара
-        $stmt = $pdo->prepare("SELECT id, price FROM products WHERE name = ? LIMIT 1");
-        $stmt->execute([$name]);
-        $existing = $stmt->fetch();
-
-        if ($existing) {
-            if ($price > (float)$existing['price']) {
-                $stmt = $pdo->prepare("UPDATE products SET price = ?, category_id = ? WHERE id = ?");
-                $stmt->execute([$price, $cat['id'], $existing['id']]);
+            if ($product) {
+                $pdo->prepare("UPDATE products SET price = ? WHERE id = ?")->execute([$price, $product['id']]);
                 $updated++;
+            } else {
+                $pdo->prepare("INSERT INTO products (name, price, category_id, is_active) VALUES (?, ?, 1, 1)")->execute([$name, $price]);
+                $created++;
             }
-        } else {
-            $stmt = $pdo->prepare("INSERT INTO products (name, category_id, price, is_active, created_at) VALUES (?, ?, ?, 1, NOW())");
-            $stmt->execute([$name, $cat['id'], $price]);
-            $imported++;
         }
+        $pdo->commit();
+        echo json_encode(['status' => 'success', 'message' => "Обработано строк: $row_count. Обновлено: $updated. Создано: $created."]);
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
     }
     fclose($stream);
-
-    echo json_encode([
-        'status' => 'success',
-        'message' => "<b>Готово!</b><br>Новых товаров: $imported<br>Цен уточнено: $updated<br>Пропущено (мусор/нет категорий): $skipped"
-    ]);
     exit;
 }

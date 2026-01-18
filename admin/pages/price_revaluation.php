@@ -4,53 +4,42 @@ require_once __DIR__ . '/../../includes/db.php';
 require_once __DIR__ . '/../../includes/perms.php';
 
 require_auth();
-
-// ЗАМЕНЯЕМ: доступ только для тех, у кого есть право редактировать цены
 require_role('edit_prices');
 
 function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 
-// 1. Быстрое создание нового товара через AJAX
+// 1. AJAX: Создание товара
 if (isset($_GET['create_new_product'])) {
     header('Content-Type: application/json');
     $name = trim($_GET['name'] ?? '');
     if(!empty($name)){
         $stmt = $pdo->prepare("INSERT INTO products (name, price, category_id, is_active) VALUES (?, 0, 1, 1)");
         $stmt->execute([$name]);
-        $new_id = $pdo->lastInsertId();
-        echo json_encode(['id' => $new_id, 'name' => $name, 'price' => 0]);
+        echo json_encode(['id' => $pdo->lastInsertId(), 'name' => $name, 'price' => 0]);
     }
     exit;
 }
 
-// 2. Живой поиск товаров
+// 2. AJAX: Живой поиск
 if (isset($_GET['search_q'])) {
     header('Content-Type: application/json');
     $q = $_GET['search_q'] ?? '';
-    $stmt = $pdo->prepare("SELECT id, name, price FROM products WHERE (name LIKE ? OR id = ?) AND is_active = 1 LIMIT 15");
+    $stmt = $pdo->prepare("SELECT id, name, price FROM products WHERE (name LIKE ? OR id = ?) AND is_active = 1 LIMIT 10");
     $stmt->execute(["%$q%", $q]);
     echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
     exit;
 }
 
-// 3. Сохранение акта переоценки
+// 3. Сохранение
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_reval'])) {
     if (!empty($_POST['items'])) {
-        
-        // ПОИСК ID СОГЛАСНО ТВОЕМУ AUTH.PHP
         $current_admin_id = $_SESSION['user']['id'] ?? 0;
-
-        if ($current_admin_id === 0) {
-            die("<div class='card' style='border:2px solid red; color:red; padding:20px;'>
-                <h3>⚠️ Ошибка сессии</h3>
-                <p>Ваш ID не найден в \$_SESSION['user']. Пожалуйста, перезайдите в систему.</p>
-            </div>");
-        }
+        $target_positions = !empty($_POST['target_positions']) ? json_encode($_POST['target_positions']) : null;
 
         $pdo->beginTransaction();
         try {
-            $stmt = $pdo->prepare("INSERT INTO price_revaluations (user_id, created_at) VALUES (?, NOW())");
-            $stmt->execute([$current_admin_id]);
+            $stmt = $pdo->prepare("INSERT INTO price_revaluations (user_id, target_positions, created_at) VALUES (?, ?, NOW())");
+            $stmt->execute([$current_admin_id, $target_positions]);
             $reval_id = $pdo->lastInsertId();
 
             foreach ($_POST['items'] as $p_id => $prices) {
@@ -61,91 +50,95 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_reval'])) {
                 $stmt->execute([(float)$prices['new'], (int)$p_id]);
             }
             $pdo->commit();
-            echo "<script>alert('Цены обновлены!'); location.href='?page=price_log';</script>";
-            exit;
+            echo "<script>window.location.href='/admin/index.php?page=price_log';</script>";
         } catch (Exception $e) {
             $pdo->rollBack();
-            die("Ошибка базы: " . $e->getMessage());
+            die("Ошибка: " . $e->getMessage());
         }
     }
 }
 
-
+$all_positions = $pdo->query("SELECT * FROM positions ORDER BY name ASC")->fetchAll();
 ?>
 
 <style>
-    .search-wrapper { position: relative; margin-bottom: 30px; z-index: 1001; }
+    .reval-container { max-width: 900px; margin: 0 auto; font-family: 'Inter', sans-serif; }
+    
     .search-input { 
-        width: 100%; height: 65px; background: rgba(120, 90, 255, 0.05); 
-        border: 2px solid #785aff; border-radius: 20px; color: #fff; 
-        padding: 0 30px; font-size: 18px; outline: none; transition: 0.3s;
+        width: 100%; height: 50px; background: rgba(120, 90, 255, 0.05); 
+        border: 1px solid #785aff; border-radius: 15px; color: #fff; 
+        padding: 0 20px; font-size: 15px; outline: none; transition: 0.2s;
     }
-    .search-input:focus { box-shadow: 0 0 25px rgba(120, 90, 255, 0.3); background: rgba(120, 90, 255, 0.1); }
-    
-    .dropdown-menu { 
-        position: absolute; top: 75px; left: 0; width: 100%; 
-        background: #1a1f35; border: 1px solid #785aff; border-radius: 15px; 
-        box-shadow: 0 20px 50px rgba(0,0,0,0.7); display: none; max-height: 400px; overflow-y: auto; 
-    }
-    .dropdown-item { padding: 15px 25px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; }
-    .dropdown-item:hover { background: rgba(120, 90, 255, 0.2); }
-    
-    .create-btn { background: #785aff; color: #fff; padding: 8px 18px; border-radius: 10px; font-weight: bold; border: none; cursor: pointer; }
+    .search-input:focus { background: rgba(120, 90, 255, 0.1); box-shadow: 0 0 15px rgba(120,90,255,0.2); }
 
-    .reval-table { width: 100%; border-collapse: collapse; }
-    .reval-table th { text-align: left; padding: 18px; color: rgba(255,255,255,0.4); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
-    .reval-table td { padding: 18px; border-bottom: 1px solid rgba(255,255,255,0.03); }
-
-    .input-new-price { 
-        background: rgba(124, 255, 107, 0.05); border: 1px solid #7CFF6B; 
-        color: #7CFF6B; padding: 12px; border-radius: 12px; width: 120px; 
-        font-weight: 800; text-align: center; font-size: 18px; outline: none;
+    .drop-menu { 
+        position: absolute; width: 100%; background: #0b0b12; border: 1px solid #333; 
+        border-radius: 12px; margin-top: 5px; z-index: 100; max-height: 300px; overflow-y: auto; display: none;
     }
-    .delete-row { color: #ff6b6b; font-size: 28px; cursor: pointer; background: none; border: none; opacity: 0.5; transition: 0.3s; }
-    .delete-row:hover { opacity: 1; transform: rotate(90deg); }
+    .drop-item { padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #1a1a1a; display: flex; justify-content: space-between; font-size: 13px; }
+    .drop-item:hover { background: #1a1a1a; }
 
-    .submit-btn { 
-        width: 100%; height: 70px; margin-top: 25px; border: none; border-radius: 20px;
-        background: linear-gradient(90deg, #2ecc71, #27ae60); color: #fff; 
-        font-size: 20px; font-weight: 800; cursor: pointer; transition: 0.3s; 
-        box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3);
+    .compact-table { width: 100%; border-collapse: collapse; }
+    .compact-table th { text-align: left; padding: 10px; font-size: 9px; color: rgba(255,255,255,0.3); text-transform: uppercase; border-bottom: 1px solid #333; }
+    .compact-table td { padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 13px; }
+
+    .price-input-mini { 
+        background: rgba(124, 255, 107, 0.05); border: 1px solid #2ecc71; 
+        color: #2ecc71; padding: 5px; border-radius: 8px; width: 80px; 
+        text-align: center; font-weight: 800; font-size: 14px; outline: none;
     }
-    .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(46, 204, 113, 0.4); }
+
+    .pos-section { background: rgba(255,255,255,0.02); border-radius: 15px; padding: 15px; margin-top: 20px; border: 1px solid rgba(255,255,255,0.05); }
+    .chip-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .chip { font-size: 11px; background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+    .chip input { accent-color: #785aff; }
+
+    .btn-submit-fixed { width: 100%; height: 50px; background: #2ecc71; color: #fff; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; margin-top: 20px; }
 </style>
 
-<div style="margin-bottom: 30px;">
-    <h1 style="margin:0; font-size: 28px;">🔄 Новая переоценка</h1>
-    <p class="muted">Выберите товары из базы и укажите новые розничные цены</p>
-</div>
+<div class="reval-container">
+    <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+        <div style="font-size: 20px;">🔄</div>
+        <h1 style="margin:0; font-size: 20px; font-weight: 800;">Новая переоценка</h1>
+    </div>
 
-<div class="card">
-    <div class="search-wrapper">
-        <input type="text" id="ajaxSearch" class="search-input" placeholder="Начните вводить название товара..." autocomplete="off">
-        <div id="ajaxDropdown" class="dropdown-menu"></div>
+    <div style="position: relative; margin-bottom: 20px;">
+        <input type="text" id="ajaxSearch" class="search-input" placeholder="Поиск товара по названию или ID..." autocomplete="off">
+        <div id="ajaxDropdown" class="drop-menu"></div>
     </div>
 
     <form method="POST">
-        <div class="card" style="padding:0; overflow:hidden; border-radius: 20px; background: rgba(255,255,255,0.02);">
-            <table class="reval-table">
+        <div class="card" style="padding:0; overflow:hidden; border-radius: 15px; border: 1px solid #333;">
+            <table class="compact-table">
                 <thead>
                     <tr>
-                        <th>Наименование товара</th>
-                        <th>Текущая цена</th>
-                        <th>Новая цена (L)</th>
-                        <th style="width: 50px;"></th>
+                        <th>Товар</th>
+                        <th>Текущая</th>
+                        <th>Новая (L)</th>
+                        <th style="width: 30px;"></th>
                     </tr>
                 </thead>
                 <tbody id="targetTable"></tbody>
             </table>
-            <div id="noItems" style="padding: 80px 20px; text-align: center; opacity: 0.3;">
-                <div style="font-size: 40px; margin-bottom: 10px;">📦</div>
-                <div>Список пуст. Воспользуйтесь поиском выше.</div>
+            <div id="noItems" style="padding: 40px; text-align: center; opacity: 0.2;">
+                <div style="font-size: 30px;">📦</div>
+                <div style="font-size: 12px;">Добавьте товары через поиск</div>
             </div>
         </div>
 
-        <button type="submit" name="submit_reval" id="btnSubmit" class="submit-btn" style="display: none;">
-            ✅ ПРИМЕНИТЬ И СОХРАНИТЬ АКТ
-        </button>
+        <div id="posSection" class="pos-section" style="display: none;">
+            <span style="font-size: 10px; font-weight: 800; color: #b866ff; text-transform: uppercase;">Направить уведомление:</span>
+            <div class="chip-grid">
+                <?php foreach($all_positions as $pos): ?>
+                    <label class="chip">
+                        <input type="checkbox" name="target_positions[]" value="<?= $pos['id'] ?>" checked>
+                        <?= h($pos['name']) ?>
+                    </label>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <button type="submit" name="submit_reval" id="btnSubmit" class="btn-submit-fixed" style="display: none;">ПРИМЕНИТЬ ЦЕНЫ</button>
     </form>
 </div>
 
@@ -155,6 +148,7 @@ const drop = document.getElementById('ajaxDropdown');
 const table = document.getElementById('targetTable');
 const placeholder = document.getElementById('noItems');
 const saveBtn = document.getElementById('btnSubmit');
+const posSection = document.getElementById('posSection');
 
 input.addEventListener('input', function() {
     let text = this.value.trim();
@@ -165,33 +159,25 @@ input.addEventListener('input', function() {
         .then(data => {
             drop.innerHTML = '';
             drop.style.display = 'block';
-
-            if (data.length > 0) {
-                data.forEach(p => {
-                    let div = document.createElement('div');
-                    div.className = 'dropdown-item';
-                    div.innerHTML = `<span>${p.name}</span> <b style="color:#785aff">${p.price} L</b>`;
-                    div.onclick = () => addToReval(p);
-                    drop.appendChild(div);
-                });
-            }
-
+            data.forEach(p => {
+                let div = document.createElement('div');
+                div.className = 'drop-item';
+                div.innerHTML = `<span>${p.name}</span> <b style="color:#785aff">${p.price} L</b>`;
+                div.onclick = () => addToReval(p);
+                drop.appendChild(div);
+            });
             let createRow = document.createElement('div');
-            createRow.className = 'dropdown-item';
+            createRow.className = 'drop-item';
             createRow.style.background = 'rgba(120,90,255,0.05)';
-            createRow.innerHTML = `<span>Создать новый: "<b>${text}</b>"</span> <button type="button" class="create-btn">+ В базу</button>`;
-            createRow.onclick = (e) => {
-                e.stopPropagation();
-                createNew(text);
-            };
+            createRow.innerHTML = `<span>+ Создать "<b>${text}</b>"</span>`;
+            createRow.onclick = () => createNew(text);
             drop.appendChild(createRow);
         });
 });
 
 function createNew(name) {
     fetch('?page=price_revaluation&create_new_product=1&name=' + encodeURIComponent(name))
-        .then(r => r.json())
-        .then(p => addToReval(p));
+        .then(r => r.json()).then(p => addToReval(p));
 }
 
 function addToReval(p) {
@@ -199,19 +185,17 @@ function addToReval(p) {
     input.value = '';
     placeholder.style.display = 'none';
     saveBtn.style.display = 'block';
-
+    posSection.style.display = 'block';
     if (document.getElementById('row-' + p.id)) return;
-
     let tr = document.createElement('tr');
     tr.id = 'row-' + p.id;
     tr.innerHTML = `
-        <td><b style="font-size:15px;">${p.name}</b><input type="hidden" name="items[${p.id}][old]" value="${p.price}"></td>
-        <td><span class="muted">${p.price} L</span></td>
-        <td><input type="number" step="0.01" name="items[${p.id}][new]" class="input-new-price" required placeholder="0.00"></td>
-        <td style="text-align:right;"><button type="button" class="delete-row" onclick="removeRow(${p.id})">&times;</button></td>
+        <td><b>${p.name}</b><input type="hidden" name="items[${p.id}][old]" value="${p.price}"></td>
+        <td style="opacity:0.5">${p.price} L</td>
+        <td><input type="number" step="0.01" name="items[${p.id}][new]" class="price-input-mini" required></td>
+        <td style="text-align:right;"><button type="button" style="background:none; border:none; color:#ff6b6b; cursor:pointer;" onclick="removeRow(${p.id})">&times;</button></td>
     `;
     table.appendChild(tr);
-    tr.querySelector('input').focus();
 }
 
 function removeRow(id) {
@@ -219,10 +203,7 @@ function removeRow(id) {
     if (table.children.length === 0) {
         placeholder.style.display = 'block';
         saveBtn.style.display = 'none';
+        posSection.style.display = 'none';
     }
 }
-
-document.addEventListener('click', (e) => {
-    if (!input.contains(e.target)) drop.style.display = 'none';
-});
 </script>

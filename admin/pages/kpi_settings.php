@@ -4,18 +4,15 @@ require_once __DIR__.'/../../includes/db.php';
 require_once __DIR__.'/../../includes/perms.php';
 
 require_auth();
-
-// Ограничение доступа: только для высшего руководства
 require_role('kpi_settings');
 
-function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
+if (!function_exists('h')) {
+    function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
+}
 
-/* ─────────────────────────────
-   СОХРАНЕНИЕ НАСТРОЕК
-───────────────────────────── */
+/* --- СОХРАНЕНИЕ --- */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach ($_POST['settings'] ?? [] as $key => $val) {
-        // Используем ON DUPLICATE KEY UPDATE для компактности таблицы settings
         $stmt = $pdo->prepare("
             INSERT INTO settings (skey, svalue)
             VALUES (?, ?)
@@ -23,22 +20,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ");
         $stmt->execute([$key, trim($val)]);
     }
-
-    // Логируем действие (опционально, если есть система логов)
-    header('Location: ?page=kpi_settings&saved=1');
+    
+    // ВМЕСТО PHP header() ИСПОЛЬЗУЕМ JS РЕДИРЕКТ
+    echo '<script>window.location.href = "?page=kpi_settings&saved=1";</script>';
     exit;
 }
 
-/* ─────────────────────────────
-   ЗАГРУЗКА ДАННЫХ
-───────────────────────────── */
+
+/* --- ЗАГРУЗКА --- */
 $settings = [];
 $stmt = $pdo->query("SELECT skey, svalue FROM settings WHERE skey LIKE 'kpi_%'");
-foreach ($stmt as $row) {
-    $settings[$row['skey']] = $row['svalue'];
-}
+foreach ($stmt as $row) { $settings[$row['skey']] = $row['svalue']; }
 
-/* ДЕФОЛТНЫЕ ЗНАЧЕНИЯ (если в базе еще пусто) */
 $defaults = [
     'kpi_enabled' => '1',
     'kpi_level_0'  => 'Стажёр',
@@ -56,100 +49,121 @@ $settings = array_merge($defaults, $settings);
 ?>
 
 <style>
-    .settings-container { max-width: 800px; margin: 0 auto; }
+    .set-container { max-width: 850px; margin: 0 auto; font-family: 'Inter', sans-serif; color: #fff; padding: 10px; }
+    
+    .set-section { 
+        background: rgba(255, 255, 255, 0.02); 
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px; 
+        padding: 25px; 
+        margin-bottom: 25px;
+    }
+
+    .set-title { font-size: 16px; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .set-title i { color: #785aff; font-style: normal; opacity: 0.6; }
+
+    /* Исправленная сетка: элементы больше не будут накладываться */
+    .set-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+        gap: 20px; 
+    }
+
+    .f-group { display: flex; flex-direction: column; gap: 8px; }
+    .f-group label { 
+        display: block; 
+        font-size: 10px; 
+        font-weight: 800; 
+        color: rgba(255,255,255,0.4); 
+        text-transform: uppercase; 
+        letter-spacing: 0.5px;
+    }
     
     .st-input { 
-        width: 100%; height: 48px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); 
-        border-radius: 14px; padding: 0 15px; color: #fff; outline: none; font-size: 14px; transition: 0.3s;
+        width: 100%; 
+        height: 44px; 
+        background: #0b0b12; 
+        border: 1px solid #333; 
+        border-radius: 12px; 
+        padding: 0 15px; 
+        color: #fff; 
+        font-size: 14px; 
+        outline: none; 
+        transition: border-color 0.2s;
+        box-sizing: border-box; /* Важно, чтобы padding не расширял блок */
     }
-    .st-input:focus { border-color: #785aff; background: rgba(120,90,255,0.08); box-shadow: 0 0 15px rgba(120,90,255,0.1); }
-
-    .settings-section { 
-        background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.05); 
-        border-radius: 24px; padding: 30px; margin-bottom: 25px; position: relative;
-    }
-    
-    .settings-section h4 { margin-top: 0; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; font-size: 18px; color: #fff; }
-    .settings-section h4 i { color: #785aff; font-style: normal; }
-    
-    .form-group label { display: block; font-size: 10px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 10px; font-weight: 800; letter-spacing: 1px; }
-
-    .grid-levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
-
-    .alert-success { 
-        background: rgba(74, 222, 128, 0.1); color: #4ade80; padding: 20px; border-radius: 18px; 
-        margin-bottom: 30px; border: 1px solid rgba(74, 222, 128, 0.2); text-align: center; font-weight: 600;
-        animation: slideDown 0.5s ease;
-    }
-
-    @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    .st-input:focus { border-color: #785aff; }
 
     .btn-save { 
-        width: 100%; height: 60px; background: linear-gradient(90deg, #785aff, #b866ff); color: #fff; border: none; border-radius: 18px; 
-        font-weight: 800; font-size: 16px; cursor: pointer; transition: 0.3s; margin-top: 10px;
-        box-shadow: 0 10px 25px rgba(120,90,255,0.3);
+        width: 100%; 
+        height: 55px; 
+        background: #785aff; 
+        color: #fff; 
+        border: none; 
+        border-radius: 15px; 
+        font-weight: 800; 
+        font-size: 16px; 
+        cursor: pointer; 
+        transition: 0.2s;
+        margin-top: 10px;
     }
-    .btn-save:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(120,90,255,0.4); }
+    .btn-save:hover { background: #6648df; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(120,90,255,0.2); }
 
-    .info-tag { font-size: 12px; background: rgba(120,90,255,0.1); color: #b866ff; padding: 4px 12px; border-radius: 20px; margin-left: auto; }
+    .alert-saved { 
+        background: rgba(124, 255, 107, 0.1); 
+        color: #7CFF6B; 
+        padding: 15px; 
+        border-radius: 12px; 
+        border: 1px solid rgba(124, 255, 107, 0.2); 
+        margin-bottom: 25px; 
+        text-align: center; 
+        font-weight: 700; 
+    }
 </style>
 
-<div class="settings-container">
-    <div style="margin-bottom: 35px; display: flex; align-items: center; justify-content: space-between;">
-        <div>
-            <h1 style="margin:0; font-size: 32px;">⚙️ Настройки KPI</h1>
-            <p class="muted" style="margin-top: 5px;">Управление грейдами и правилами начисления бонусов</p>
-        </div>
-        <div style="text-align: right;">
-            <span class="info-tag">v2.1 Stable</span>
-        </div>
+<div class="set-container">
+    <div style="margin-bottom: 30px;">
+        <h1 style="margin:0; font-size: 26px; font-weight: 900;">⚙️ Настройки KPI</h1>
+        <p style="margin:5px 0 0 0; font-size: 14px; opacity: 0.5;">Конфигурация уровней и бонусной сетки</p>
     </div>
 
     <?php if (isset($_GET['saved'])): ?>
-        <div class="alert-success">✨ Настройки успешно применены и вступят в силу немедленно</div>
+        <div class="alert-saved">✨ Настройки успешно сохранены</div>
     <?php endif; ?>
 
-    <form method="post" autocomplete="off">
-        
-        <div class="settings-section">
-            <h4><i>01.</i> Статус системы</h4>
-            <div class="form-group" style="max-width: 300px;">
-                <label>Глобальный переключатель</label>
+    <form method="post">
+        <div class="set-section">
+            <div class="set-title"><i>01</i> Работа системы</div>
+            <div class="f-group" style="max-width: 300px;">
+                <label>Глобальный статус</label>
                 <select name="settings[kpi_enabled]" class="st-input">
-                    <option value="1" <?= $settings['kpi_enabled']=='1'?'selected':'' ?>>🟢 Система активна</option>
-                    <option value="0" <?= $settings['kpi_enabled']=='0'?'selected':'' ?>>🔴 Система отключена</option>
+                    <option value="1" <?= $settings['kpi_enabled']=='1'?'selected':'' ?>>Включена</option>
+                    <option value="0" <?= $settings['kpi_enabled']=='0'?'selected':'' ?>>Выключена</option>
                 </select>
             </div>
-            <p class="muted" style="font-size: 12px; margin-top: 15px;">Если отключено, сотрудники не будут видеть свои планы и прогресс в личном кабинете.</p>
         </div>
 
-        <div class="settings-section">
-            <div style="display: flex; align-items: center; margin-bottom: 25px;">
-                <h4 style="margin:0;"><i>02.</i> Карьерная лестница</h4>
-                <span class="muted" style="font-size: 12px; margin-left: 15px;">(Грейды)</span>
-            </div>
-            
-            <div class="grid-levels">
+        <div class="set-section">
+            <div class="set-title"><i>02</i> Карьерные грейды</div>
+            <div class="set-grid">
                 <?php foreach ([0, 5, 10, 15, 20, 30] as $min): ?>
-                <div class="form-group">
+                <div class="f-group">
                     <label>От <?= $min ?>% плана</label>
-                    <input type="text" class="st-input" name="settings[kpi_level_<?= $min ?>]" value="<?= h($settings['kpi_level_'.$min]) ?>" placeholder="Название ранга">
+                    <input type="text" class="st-input" name="settings[kpi_level_<?= $min ?>]" value="<?= h($settings['kpi_level_'.$min]) ?>">
                 </div>
                 <?php endforeach; ?>
             </div>
         </div>
 
-        <div class="settings-section">
-            <h4><i>03.</i> Мотивационная сетка</h4>
-            <p class="muted" style="font-size: 12px; margin-bottom: 25px;">Укажите % премии, который прибавляется к зарплате при достижении указанных порогов выполнения плана.</p>
-            
-            <div class="grid-levels">
+        <div class="set-section" style="border-color: rgba(124, 255, 107, 0.2);">
+            <div class="set-title" style="color: #7CFF6B;"><i>03</i> Сетка премий</div>
+            <div class="set-grid">
                 <?php foreach ([100, 110, 120, 130] as $perc): ?>
-                <div class="form-group">
-                    <label>При <?= $perc ?>% выполнения</label>
+                <div class="f-group">
+                    <label>При <?= $perc ?>% KPI</label>
                     <div style="position: relative;">
-                        <input type="number" class="st-input" name="settings[kpi_bonus_<?= $perc ?>]" value="<?= h($settings['kpi_bonus_'.$perc]) ?>" placeholder="0">
-                        <span style="position: absolute; right: 15px; top: 14px; color: rgba(255,255,255,0.2); font-weight: 900;">%</span>
+                        <input type="number" class="st-input" name="settings[kpi_bonus_<?= $perc ?>]" value="<?= h($settings['kpi_bonus_'.$perc]) ?>">
+                        <span style="position: absolute; right: 15px; top: 12px; opacity: 0.3; font-weight: 800;">%</span>
                     </div>
                 </div>
                 <?php endforeach; ?>
@@ -157,6 +171,5 @@ $settings = array_merge($defaults, $settings);
         </div>
 
         <button type="submit" class="btn-save">💾 СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
-        <p class="muted" style="text-align: center; font-size: 11px; margin-top: 20px;">Изменения коснутся всех текущих расчетов в реальном времени.</p>
     </form>
 </div>

@@ -4,166 +4,156 @@ require_once __DIR__ . '/../../includes/db.php';
 require_once __DIR__ . '/../../includes/perms.php';
 
 require_auth();
-
-// ЗАМЕНЯЕМ: доступ по праву просмотра отчетов
 require_role('view_reports');
 
 function h($s){ return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 
-/* ===== ФИЛЬТРЫ ===== */
+/* --- ФИЛЬТРЫ --- */
 $from = $_GET['from'] ?? date('Y-m-01');
 $to   = $_GET['to']   ?? date('Y-m-d');
-
 $branchId = (int)($_GET['branch_id'] ?? 0);
-$userId   = (int)($_GET['user_id']   ?? 0);
 
-/* ===== СПРАВОЧНИКИ ===== */
 $branches = $pdo->query("SELECT id, name FROM branches ORDER BY name")->fetchAll();
-$users_list = $pdo->query("SELECT id, first_name, last_name FROM users ORDER BY last_name")->fetchAll();
 
-/* ===== ОСНОВНОЙ ЗАПРОС ===== */
+/* --- ЗАПРОС --- */
 $sql = "
-SELECT
-    u.id AS user_id,
-    u.first_name, u.last_name,
-    b.name AS branch_name,
-    COUNT(DISTINCT s.id) AS checks,
-    SUM(s.total_amount) AS total_sum,
-    (SELECT SUM(si2.salary_amount) 
+SELECT 
+    DATE(s.created_at) as date,
+    COUNT(s.id) as checks_count,
+    SUM(s.total_amount) as daily_total,
+    SUM(CASE WHEN s.payment_type = 'card' THEN s.total_amount ELSE 0 END) as card_total,
+    SUM(CASE WHEN s.payment_type = 'cash' THEN s.total_amount ELSE 0 END) as cash_total,
+    SUM(CASE WHEN s.client_id IS NOT NULL THEN 1 ELSE 0 END) as client_checks,
+    (SELECT COALESCE(SUM(si2.price * si2.quantity), 0) 
      FROM sale_items si2 
      JOIN sales s2 ON s2.id = si2.sale_id 
-     WHERE s2.user_id = u.id 
-       AND s2.branch_id = b.id 
-       AND DATE(s2.created_at) BETWEEN ? AND ?
-    ) AS total_salary,
-    COUNT(DISTINCT CASE WHEN (SELECT COUNT(*) FROM sale_items WHERE sale_id = s.id) >= 2 THEN s.id END) AS cross_sales
+     JOIN product_promotions pr ON pr.product_name = si2.product_name
+     WHERE DATE(s2.created_at) = DATE(s.created_at) 
+     AND DATE(s2.created_at) BETWEEN pr.start_date AND pr.end_date
+     " . ($branchId ? " AND s2.branch_id = $branchId" : "") . "
+    ) as promo_volume
 FROM sales s
-JOIN users u ON u.id = s.user_id
-JOIN branches b ON b.id = s.branch_id
-WHERE s.total_amount > 0
+WHERE s.total_amount > 0 
   AND DATE(s.created_at) BETWEEN ? AND ?
 ";
 
-$params = [$from, $to, $from, $to];
-
-if ($branchId) { $sql .= " AND s.branch_id = ? "; $params[] = $branchId; }
-if ($userId) { $sql .= " AND s.user_id = ? "; $params[] = $userId; }
-
-$sql .= " GROUP BY u.id, b.id ORDER BY total_sum DESC ";
+if ($branchId) $sql .= " AND s.branch_id = $branchId";
+$sql .= " GROUP BY DATE(s.created_at) ORDER BY DATE(s.created_at) DESC";
 
 $stmt = $pdo->prepare($sql);
-$stmt->execute($params);
+$stmt->execute([$from, $to]);
 $rows = $stmt->fetchAll();
+
+$totalRevenue = array_sum(array_column($rows, 'daily_total'));
 ?>
 
 <style>
-    .report-filters { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 20px; }
-    .st-input { 
-        height: 42px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); 
-        border-radius: 12px; padding: 0 12px; color: #fff; outline: none; font-size: 13px; transition: 0.3s;
-    }
-    .st-input:focus { border-color: #785aff; background: rgba(120, 90, 255, 0.05); }
-
-    .report-table { width: 100%; border-collapse: collapse; }
-    .report-table th { 
-        text-align: left; padding: 15px; font-size: 10px; text-transform: uppercase; 
-        color: rgba(255,255,255,0.3); border-bottom: 1px solid rgba(255,255,255,0.1); letter-spacing: 1px;
-    }
-    .report-table td { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.03); font-size: 14px; }
-    .report-table tr:hover { background: rgba(255,255,255,0.02); }
-
-    .money { white-space: nowrap; font-weight: 700; }
-    .salary-col { color: #7CFF6B; text-shadow: 0 0 10px rgba(124, 255, 107, 0.2); }
-    .avg-col { color: #b866ff; }
+    .report-shell { font-family: 'Inter', sans-serif; color: #e1e1e6; max-width: 1200px; margin: 0 auto; }
     
-    .badge-cross { background: rgba(184, 102, 255, 0.2); color: #d199ff; padding: 3px 8px; border-radius: 6px; font-size: 10px; font-weight: 800; border: 1px solid rgba(184, 102, 255, 0.3); }
-    
-    .indicator-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin-top: 5px; width: 100%; overflow: hidden; }
-    .indicator-fill { height: 100%; background: #785aff; }
+    /* Стеклянные карточки */
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 30px; }
+    .stat-glass { 
+        background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+        border: 1px solid rgba(255,255,255,0.08); padding: 25px; border-radius: 24px;
+        backdrop-filter: blur(10px);
+    }
+    .stat-glass span { display: block; font-size: 10px; text-transform: uppercase; color: #82828e; letter-spacing: 1.5px; font-weight: 700; margin-bottom: 8px; }
+    .stat-glass b { font-size: 26px; color: #fff; letter-spacing: -1px; }
+
+    /* Фильтры */
+    .filter-stripe { 
+        background: rgba(0,0,0,0.2); padding: 15px 25px; border-radius: 18px; 
+        margin-bottom: 30px; display: flex; gap: 15px; align-items: center; border: 1px solid #222;
+    }
+    .f-input { height: 40px; background: #000; border: 1px solid #333; border-radius: 10px; color: #fff; padding: 0 15px; font-size: 13px; outline: none; }
+    .f-input:focus { border-color: #785aff; }
+
+    /* Таблица в стиле Fintech */
+    .fin-table-wrap { background: #0f0f13; border-radius: 24px; border: 1px solid #1f1f23; overflow: hidden; }
+    .fin-table { width: 100%; border-collapse: collapse; }
+    .fin-table th { 
+        padding: 15px 20px; text-align: left; font-size: 10px; text-transform: uppercase; 
+        color: #41414c; background: #16161a; border-bottom: 1px solid #1f1f23;
+    }
+    .fin-table td { padding: 18px 20px; border-bottom: 1px solid #16161a; font-size: 14px; }
+    .fin-table tr:hover { background: rgba(120, 90, 255, 0.03); }
+
+    /* Метки */
+    .tag-cash { color: #ffbb33; font-size: 11px; font-weight: 700; }
+    .tag-card { color: #0099ff; font-size: 11px; font-weight: 700; }
+    .promo-alert { color: #ff4b2b; font-weight: 800; font-size: 14px; }
+    .loyalty-val { color: #7CFF6B; font-weight: 800; }
 </style>
 
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
-    <div>
-        <h1 style="margin:0; font-size: 24px;">📊 Таблица эффективности</h1>
-        <p class="muted" style="margin:5px 0 0 0;">Анализ качества продаж и вознаграждений</p>
+<div class="report-shell">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+        <div>
+            <h1 style="margin:0; font-size: 28px; font-weight: 900; background: linear-gradient(to right, #fff, #82828e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Отчет по выручке</h1>
+            <p style="margin:5px 0 0 0; font-size: 14px; color: #82828e;">Финансовая аналитика за период</p>
+        </div>
+        <button class="f-input" onclick="window.print()" style="cursor:pointer">🖨️ Печать</button>
     </div>
-</div>
 
-<div class="card" style="border-radius: 24px; margin-bottom: 20px;">
-    <form class="report-filters" method="get">
+    <form class="filter-stripe">
         <input type="hidden" name="page" value="report_sales">
-        <div>
-            <label class="muted" style="font-size: 10px; display:block; margin-bottom:5px; text-transform: uppercase;">Начало</label>
-            <input type="date" name="from" class="st-input" value="<?= h($from) ?>">
-        </div>
-        <div>
-            <label class="muted" style="font-size: 10px; display:block; margin-bottom:5px; text-transform: uppercase;">Конец</label>
-            <input type="date" name="to" class="st-input" value="<?= h($to) ?>">
-        </div>
-        <div>
-            <label class="muted" style="font-size: 10px; display:block; margin-bottom:5px; text-transform: uppercase;">Филиал</label>
-            <select name="branch_id" class="st-input">
-                <option value="0">Все локации</option>
-                <?php foreach ($branches as $b): ?>
-                    <option value="<?= $b['id'] ?>" <?= $branchId==$b['id']?'selected':'' ?>><?= h($b['name']) ?></option>
-                <?php endforeach; ?>
-            </select>
-        </div>
-        <button class="btn" style="height: 42px; padding: 0 25px; border-radius: 12px;">Рассчитать</button>
+        <select name="branch_id" class="f-input" style="flex: 1;">
+            <option value="0">Все подразделения</option>
+            <?php foreach($branches as $b): ?>
+                <option value="<?= $b['id'] ?>" <?= $branchId == $b['id'] ? 'selected' : '' ?>><?= h($b['name']) ?></option>
+            <?php endforeach; ?>
+        </select>
+        <input type="date" name="from" class="f-input" value="<?= $from ?>">
+        <input type="date" name="to" class="f-input" value="<?= $to ?>">
+        <button type="submit" style="background:#785aff; color:#fff; border:none; padding:10px 25px; border-radius:10px; font-weight:700; cursor:pointer;">Применить</button>
     </form>
-</div>
 
-<div class="card" style="padding: 0; overflow: hidden; border-radius: 24px;">
-    <div style="overflow-x: auto;">
-        <table class="report-table">
+    <div class="stat-grid">
+        <div class="stat-glass"><span>Общий оборот</span><b><?= number_format((float)$totalRevenue, 0, '.', ' ') ?> L</b></div>
+        <div class="stat-glass"><span>Дней в периоде</span><b><?= count($rows) ?></b></div>
+        <div class="stat-glass"><span>Ср. чек периода</span><b><?= $totalRevenue > 0 ? number_format((float)($totalRevenue / (array_sum(array_column($rows, 'checks_count')) ?: 1)), 0, '.', ' ') : 0 ?> L</b></div>
+    </div>
+
+    <div class="fin-table-wrap">
+        <table class="fin-table">
             <thead>
                 <tr>
-                    <th>Сотрудник</th>
-                    <th>Филиал</th>
-                    <th style="text-align: center;">Чеков</th>
-                    <th>Выручка</th>
-                    <th style="color: #7CFF6B;">ЗП Бонус</th>
-                    <th>Ср. Чек</th>
-                    <th>Кросс-чеки</th>
-                    <th>Коэф.</th>
+                    <th>Дата</th>
+                    <th>Оплата (Нал / Карта)</th>
+                    <th>Акционный объем</th>
+                    <th>CRM Лояльность</th>
+                    <th style="text-align: right;">Итого за день</th>
                 </tr>
             </thead>
             <tbody>
                 <?php if (!$rows): ?>
-                    <tr><td colspan="8" style="text-align: center; padding: 60px; opacity: 0.3;">За данный период данных нет</td></tr>
+                    <tr><td colspan="5" style="text-align:center; padding: 50px; opacity: 0.3;">Нет данных для отображения</td></tr>
                 <?php endif; ?>
 
-                <?php foreach ($rows as $r): 
-                    $avg = $r['checks'] ? (float)$r['total_sum'] / $r['checks'] : 0;
-                    $coef = $r['checks'] ? ((float)$r['cross_sales'] / $r['checks'] * 100) : 0;
+                <?php foreach($rows as $r): 
+                    $promoVol = (float)($r['promo_volume'] ?? 0);
+                    $dailyTotal = (float)($r['daily_total'] ?? 0);
+                    $promoShare = $dailyTotal > 0 ? ($promoVol / $dailyTotal * 100) : 0;
                 ?>
                 <tr>
                     <td>
-                        <a href="?page=report_sales_user_chart&user_id=<?= $r['user_id'] ?>" style="text-decoration:none; color:inherit;">
-                            <div style="font-weight: 700; font-size: 15px;"><?= h($r['last_name'].' '.mb_substr($r['first_name'],0,1).'.') ?></div>
-                            <div style="font-size: 11px; color:#785aff;">Открыть график</div>
-                        </a>
+                        <div style="font-weight: 800; color: #fff;"><?= date('d.m.Y', strtotime($r['date'])) ?></div>
+                        <div style="font-size: 11px; color: #41414c;"><?= $r['checks_count'] ?> транзакций</div>
                     </td>
-                    <td><span class="muted"><?= h($r['branch_name']) ?></span></td>
-                    <td style="text-align: center; font-weight: 600;"><?= $r['checks'] ?></td>
-                    <td class="money"><?= number_format((float)$r['total_sum'], 0, '.', ' ') ?> L</td>
-                    <td class="money salary-col"><?= number_format((float)$r['total_salary'], 2, '.', ' ') ?> L</td>
-                    <td class="money avg-col"><?= number_format($avg, 0, '.', ' ') ?> L</td>
                     <td>
-                        <div style="display:flex; align-items:center; gap:8px;">
-                            <span><?= $r['cross_sales'] ?></span>
-                            <?php if ($r['cross_sales'] > 0): ?>
-                                <span class="badge-cross">CROSS</span>
-                            <?php endif; ?>
-                        </div>
+                        <span class="tag-cash">💵 <?= number_format((float)$r['cash_total'], 0, '.', ' ') ?></span>
+                        <span style="color:#222; margin: 0 8px;">|</span>
+                        <span class="tag-card">💳 <?= number_format((float)$r['card_total'], 0, '.', ' ') ?></span>
                     </td>
-                    <td style="width: 100px;">
-                        <div style="font-weight: 800; color: <?= $coef >= 30 ? '#00c851' : ($coef >= 15 ? '#ffbb33' : '#ff4444') ?>;">
-                            <?= round($coef, 1) ?>%
-                        </div>
-                        <div class="indicator-bar">
-                            <div class="indicator-fill" style="width: <?= min($coef, 100) ?>%; background: <?= $coef >= 30 ? '#00c851' : ($coef >= 15 ? '#ffbb33' : '#ff4444') ?>;"></div>
-                        </div>
+                    <td>
+                        <div class="<?= $promoShare > 35 ? 'promo-alert' : '' ?>"><?= number_format($promoVol, 0, '.', ' ') ?> L</div>
+                        <div style="font-size: 10px; color: #41414c;">Доля акций: <?= round($promoShare, 1) ?>%</div>
+                    </td>
+                    <td>
+                        <div class="loyalty-val"><?= round($r['checks_count'] > 0 ? ($r['client_checks'] / $r['checks_count'] * 100) : 0, 1) ?>%</div>
+                        <div style="font-size: 10px; color: #41414c;"><?= $r['client_checks'] ?> клиентов</div>
+                    </td>
+                    <td style="text-align: right;">
+                        <b style="font-size: 18px; color: #fff;"><?= number_format($dailyTotal, 0, '.', ' ') ?> L</b>
                     </td>
                 </tr>
                 <?php endforeach; ?>

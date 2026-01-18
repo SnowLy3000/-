@@ -541,3 +541,865 @@ Stack trace:
   thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
 [29-Dec-2025 16:00:57 Europe/Chisinau] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php on line 37
 [29-Dec-2025 16:42:10 Europe/Chisinau] PHP Parse error:  syntax error, unexpected token "endif", expecting end of file in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 218
+[29-Dec-2025 23:59:08 Europe/Chisinau] PHP Warning:  Undefined variable $checkin_enabled in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 187
+[29-Dec-2025 23:59:08 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php:197
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 197
+[30-Dec-2025 00:08:56 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function setting_set() in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 14
+[30-Dec-2025 00:09:13 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function setting_set() in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 14
+[30-Dec-2025 00:09:42 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function setting_set() in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 14
+[30-Dec-2025 00:12:36 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 25
+[30-Dec-2025 00:12:53 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function setting_set() in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 14
+[30-Dec-2025 00:12:58 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function setting_set() in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php:14
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 14
+[30-Dec-2025 00:18:40 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 22
+[30-Dec-2025 00:18:48 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/settings_checkin.php on line 22
+[30-Dec-2025 00:23:41 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/user_edit.php on line 60
+[30-Dec-2025 00:26:43 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/user_edit.php on line 60
+[30-Dec-2025 00:38:31 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/user_edit.php on line 60
+[30-Dec-2025 00:48:54 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php on line 28
+[30-Dec-2025 00:50:20 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Директор' for key 'uq_positions_name' in /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php:29
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php(29): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php on line 29
+[30-Dec-2025 00:52:59 Europe/Chisinau] PHP Parse error:  Unmatched '}' in /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php on line 51
+[30-Dec-2025 00:58:24 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role_id' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php:45
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php(45): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/roles.php on line 45
+[30-Dec-2025 01:26:54 Europe/Chisinau] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 47
+[30-Dec-2025 01:26:54 Europe/Chisinau] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 47
+[30-Dec-2025 01:26:54 Europe/Chisinau] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 47
+[30-Dec-2025 17:18:11 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/import.php on line 7
+[30-Dec-2025 17:18:40 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/import.php on line 7
+[30-Dec-2025 17:25:47 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/import.php on line 7
+[30-Dec-2025 17:25:50 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/import.php on line 7
+[30-Dec-2025 17:25:52 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/import.php on line 7
+[30-Dec-2025 17:30:00 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/import.php on line 7
+[30-Dec-2025 17:31:53 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:159) in /home/oizsopkxtv/kubinfo.live/admin/pages/import.php on line 7
+[31-Dec-2025 10:37:33 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:151) in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 11
+[01-Jan-2026 23:18:10 Europe/Chisinau] PHP Warning:  Undefined variable $total_sales in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 165
+[01-Jan-2026 23:18:10 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 165
+[01-Jan-2026 23:18:10 Europe/Chisinau] PHP Warning:  Undefined variable $returned_sum in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 166
+[01-Jan-2026 23:18:12 Europe/Chisinau] PHP Warning:  Undefined variable $total_sales in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 165
+[01-Jan-2026 23:18:12 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 165
+[01-Jan-2026 23:18:12 Europe/Chisinau] PHP Warning:  Undefined variable $returned_sum in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 166
+[01-Jan-2026 23:18:52 Europe/Chisinau] PHP Warning:  Undefined variable $total_sales in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 165
+[01-Jan-2026 23:18:52 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 165
+[01-Jan-2026 23:18:52 Europe/Chisinau] PHP Warning:  Undefined variable $returned_sum in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 166
+[01-Jan-2026 23:19:12 Europe/Chisinau] PHP Warning:  Undefined variable $total_sales in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 165
+[01-Jan-2026 23:19:12 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 165
+[01-Jan-2026 23:19:12 Europe/Chisinau] PHP Warning:  Undefined variable $returned_sum in /home/oizsopkxtv/kubinfo.live/admin/pages/dashboard.php on line 166
+[02-Jan-2026 10:05:10 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/pages/returns_control.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 10:05:10 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/pages/returns_control.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 10:09:07 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/returns_control.php:73
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/returns_control.php on line 73
+[02-Jan-2026 10:12:49 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/returns_control.php:73
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/returns_control.php on line 73
+[02-Jan-2026 10:14:34 Europe/Chisinau] PHP Parse error:  syntax error, unexpected token "var" in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales.php on line 165
+[02-Jan-2026 10:16:11 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/returns_control.php:73
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/returns_control.php on line 73
+[02-Jan-2026 12:03:55 Europe/Chisinau] PHP Warning:  Undefined array key "staff_monitor" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 12:03:55 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 12:07:33 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/admin/pages/staff_monitor.php:5
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/staff_monitor.php(5): PDO->query()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/staff_monitor.php on line 5
+[02-Jan-2026 12:08:02 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/branch_schedules.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 12:08:02 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/branch_schedules.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 12:14:29 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/branch_schedules.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 12:14:29 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/branch_schedules.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 12:26:15 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/branch_schedules.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 12:26:15 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/branch_schedules.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 12:27:51 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/branch_schedules.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[02-Jan-2026 12:27:51 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/branch_schedules.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 01:10:15 Europe/Chisinau] PHP Warning:  Undefined array key "clients" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 01:10:15 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 01:10:17 Europe/Chisinau] PHP Warning:  Undefined array key "client_history" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 01:10:17 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 01:12:27 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.added_by' in 'ON' in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php(47): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 47
+[03-Jan-2026 01:12:33 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.added_by' in 'ON' in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php(47): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 47
+[03-Jan-2026 01:12:37 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.added_by' in 'ON' in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php:47
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php(47): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 47
+[03-Jan-2026 01:18:33 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php:76
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 76
+[03-Jan-2026 01:20:03 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php:76
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 76
+[02-Jan-2026 23:31:41 UTC] PHP Parse error:  Unclosed '{' on line 33 in /home/oizsopkxtv/kubinfo.live/includes/db.php on line 34
+[02-Jan-2026 23:31:43 UTC] PHP Parse error:  Unclosed '{' on line 33 in /home/oizsopkxtv/kubinfo.live/includes/db.php on line 34
+[02-Jan-2026 23:31:47 UTC] PHP Parse error:  Unclosed '{' on line 33 in /home/oizsopkxtv/kubinfo.live/includes/db.php on line 34
+[02-Jan-2026 23:31:49 UTC] PHP Parse error:  Unclosed '{' on line 33 in /home/oizsopkxtv/kubinfo.live/includes/db.php on line 34
+[02-Jan-2026 23:32:18 UTC] PHP Parse error:  Unclosed '{' in /home/oizsopkxtv/kubinfo.live/includes/db.php on line 34
+[03-Jan-2026 01:34:20 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '79141790' for key 'phone' in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php:26
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php(26): PDOStatement->execute()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 26
+[03-Jan-2026 01:36:45 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:142) in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 22
+[03-Jan-2026 01:47:24 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:142) in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 2
+[03-Jan-2026 01:47:51 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:142) in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 4
+[03-Jan-2026 01:48:16 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:142) in /home/oizsopkxtv/kubinfo.live/admin/pages/clients.php on line 11
+[03-Jan-2026 12:07:35 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:142) in /home/oizsopkxtv/kubinfo.live/admin/pages/user_edit.php on line 60
+[03-Jan-2026 16:47:09 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_export_pdf" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 16:47:09 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 16:48:20 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_chart.php" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 16:48:20 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 16:52:52 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_export_pdf" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 16:52:52 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 16:53:15 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_export_pdf" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 16:53:15 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 16:59:36 Europe/Chisinau] PHP Warning:  Undefined array key "created_at" in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_fix.php on line 147
+[03-Jan-2026 16:59:36 Europe/Chisinau] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_fix.php on line 147
+[03-Jan-2026 16:59:54 Europe/Chisinau] PHP Warning:  Undefined array key "created_at" in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_fix.php on line 147
+[03-Jan-2026 16:59:54 Europe/Chisinau] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_fix.php on line 147
+[03-Jan-2026 17:01:59 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_fix.php" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 17:01:59 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 17:02:43 Europe/Chisinau] PHP Warning:  Undefined array key "kpi_chart.php" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 17:02:43 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:25
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 25
+[03-Jan-2026 17:09:35 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:142) in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_settings.php on line 23
+[03-Jan-2026 17:30:08 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'position_id' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:24
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(24): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 24
+[03-Jan-2026 17:30:11 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'position_id' in 'SELECT' in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php:24
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php(24): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/price_confirm.php on line 24
+[03-Jan-2026 17:33:45 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales.php on line 133
+[03-Jan-2026 17:37:32 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php:87
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php on line 87
+[03-Jan-2026 18:14:07 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php:87
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php on line 87
+[03-Jan-2026 18:14:12 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php:92
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(25): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/report_sales_chart.php on line 92
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:56:47 Europe/Chisinau] PHP Warning:  Undefined array key "email" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 108
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 18:58:06 Europe/Chisinau] PHP Warning:  Undefined array key "user_id" in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 144
+[03-Jan-2026 21:46:10 Europe/Chisinau] PHP Warning:  Undefined array key "academy_stats" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 21:46:10 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:22:05 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_stats.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:22:05 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_stats.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:23:52 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_stats.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:23:52 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_stats.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:24:08 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_stats.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:24:08 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_stats.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:25:42 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_stats.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:25:42 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_stats.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:26:58 Europe/Chisinau] PHP Warning:  Undefined array key "academy_test_add" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:26:58 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:29:20 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:29:20 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:31:03 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:31:03 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:31:09 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:31:09 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:33:25 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:33:25 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:33:30 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:33:30 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:35:21 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:35:21 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_add.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:44:07 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_edit.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:44:07 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/../admin/pages/academy_topic_edit.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[03-Jan-2026 22:57:55 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'topic_id' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php:51
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php(51): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 51
+[04-Jan-2026 10:46:38 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php:53
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php on line 53
+[04-Jan-2026 10:49:19 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php:53
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php on line 53
+[04-Jan-2026 13:20:05 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'l.admin_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php:11
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php(11): PDO->query()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php on line 11
+[04-Jan-2026 13:20:24 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'l.admin_id' in 'ON' in /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php:11
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php(11): PDO->query()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/gamification_hub.php on line 11
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:25:12 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:14 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:18 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:19 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:21 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:23 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:25 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:28:27 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:48:36 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 21
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "is_exam" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 22
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Warning:  Undefined array key "description" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:56:00 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:59:49 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:59:49 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:59:49 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 13:59:49 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:55 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:55 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:55 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:55 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:57 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:57 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:57 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:57 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:59 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:59 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:59 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:00:59 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:00 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:00 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:00 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:00 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:02 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:02 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:02 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:02 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:04 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:04 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:04 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:04 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:08 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:08 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:08 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:08 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:10 Europe/Chisinau] PHP Warning:  Undefined array key "test_edit" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 14:01:10 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 14:01:13 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:13 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:13 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:01:13 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:50:54 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:50:54 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:50:54 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:50:54 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:55:06 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:55:06 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:55:06 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 14:55:06 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:15 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:15 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:15 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:15 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:22 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:22 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:22 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:22 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:24 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:24 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:24 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:24 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:27 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:27 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:27 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:27 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:28 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:28 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:28 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:14:28 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:35:49 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:35:49 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:35:49 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:35:49 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:35:58 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:35:58 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:35:58 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:35:58 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:35:59 Europe/Chisinau] PHP Warning:  Undefined array key "test_edit" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:35:59 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:36:17 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:36:17 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:36:17 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:36:17 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:39:28 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:39:28 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:39:28 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:39:28 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:39:30 Europe/Chisinau] PHP Warning:  Undefined array key "test_edit" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:39:30 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:39:38 Europe/Chisinau] PHP Warning:  Undefined array key "test_edit" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:39:38 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:40:10 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/pages/test_edit.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:40:10 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/pages/test_edit.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:40:13 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:40:13 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:40:13 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:40:13 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:40:14 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/pages/test_edit.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:40:14 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/pages/test_edit.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:40:54 Europe/Chisinau] PHP Warning:  require(/home/oizsopkxtv/kubinfo.live/includes/pages/test_edit.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:40:54 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/pages/test_edit.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 15:46:14 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/test_edit.php:36
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/test_edit.php on line 36
+[04-Jan-2026 15:46:22 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:22 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:22 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:22 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:25 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:25 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:25 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:29 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:29 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:33 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:33 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:36 Europe/Chisinau] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 25
+[04-Jan-2026 15:46:40 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/test_edit.php:36
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/test_edit.php on line 36
+[04-Jan-2026 15:52:55 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/test_edit.php:36
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/test_edit.php on line 36
+[04-Jan-2026 20:32:58 Europe/Chisinau] PHP Warning:  Undefined variable $uid in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 136
+[04-Jan-2026 20:33:54 Europe/Chisinau] PHP Warning:  Undefined variable $uid in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 136
+[04-Jan-2026 20:34:02 Europe/Chisinau] PHP Warning:  Undefined variable $uid in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 136
+[04-Jan-2026 20:34:39 Europe/Chisinau] PHP Warning:  Undefined variable $uid in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 136
+[04-Jan-2026 20:34:41 Europe/Chisinau] PHP Warning:  Undefined variable $uid in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 136
+[04-Jan-2026 20:35:25 Europe/Chisinau] PHP Warning:  Undefined variable $uid in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 136
+[04-Jan-2026 20:35:46 Europe/Chisinau] PHP Warning:  Undefined variable $uid in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 136
+[04-Jan-2026 20:37:57 Europe/Chisinau] PHP Warning:  Undefined variable $display_lvl in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 171
+[04-Jan-2026 20:38:11 Europe/Chisinau] PHP Warning:  Undefined variable $display_lvl in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 172
+[04-Jan-2026 20:40:04 Europe/Chisinau] PHP Warning:  Undefined variable $display_lvl in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 171
+[04-Jan-2026 20:40:18 Europe/Chisinau] PHP Warning:  Undefined variable $display_lvl in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 171
+[04-Jan-2026 21:45:57 Europe/Chisinau] PHP Warning:  Undefined array key "logo" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 21:45:57 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 21:46:03 Europe/Chisinau] PHP Warning:  Undefined array key "logout" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 21:46:03 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 21:46:12 Europe/Chisinau] PHP Warning:  Undefined array key "logaut" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 21:46:12 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 21:46:24 Europe/Chisinau] PHP Warning:  Undefined array key "logaut" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[04-Jan-2026 21:46:24 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[06-Jan-2026 14:37:55 Europe/Chisinau] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/kpi_user.php on line 138
+[09-Jan-2026 12:20:47 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:167) in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php on line 15
+[09-Jan-2026 12:21:58 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php:87
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php on line 87
+[09-Jan-2026 12:22:01 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php:87
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php on line 87
+[09-Jan-2026 12:23:14 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php:87
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php on line 87
+[09-Jan-2026 12:23:16 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php:87
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php on line 87
+[09-Jan-2026 17:15:31 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:58
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 58
+[09-Jan-2026 17:17:50 Europe/Chisinau] PHP Parse error:  syntax error, unexpected token "?" in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 207
+[09-Jan-2026 17:18:21 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:58
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 58
+[09-Jan-2026 17:18:51 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:58
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 58
+[09-Jan-2026 17:18:55 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to undefined function h() in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:58
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 58
+[11-Jan-2026 10:04:09 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:167) in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php on line 34
+[11-Jan-2026 10:05:29 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:167) in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php on line 17
+[11-Jan-2026 10:05:55 Europe/Chisinau] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:167) in /home/oizsopkxtv/kubinfo.live/admin/pages/glass.php on line 34
+[11-Jan-2026 11:33:03 Europe/Chisinau] PHP Warning:  Undefined array key "xp_reward" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 556
+[11-Jan-2026 11:33:03 Europe/Chisinau] PHP Warning:  Undefined array key "xp_reward" in /home/oizsopkxtv/kubinfo.live/admin/pages/academy_manage.php on line 556
+[11-Jan-2026 12:26:48 Europe/Chisinau] PHP Warning:  Undefined array key "user_add" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[11-Jan-2026 12:26:48 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[11-Jan-2026 12:36:51 Europe/Chisinau] PHP Deprecated:  strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 700
+[11-Jan-2026 12:54:49 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Call to a member function fetchColumn() on bool in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php:25
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 25
+[11-Jan-2026 13:29:06 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.deleted_at' in 'ORDER BY' in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php:120
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/users.php(120): PDO->query()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/users.php on line 120
+[11-Jan-2026 13:30:02 Europe/Chisinau] PHP Warning:  Undefined array key "user_add" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[11-Jan-2026 13:30:02 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[14-Jan-2026 19:38:07 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'check_time' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:115
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php(115): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 115
+[14-Jan-2026 19:38:30 Europe/Chisinau] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'check_time' in 'WHERE' in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php:115
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php(115): PDO->prepare()
+#1 /home/oizsopkxtv/kubinfo.live/admin/index.php(31): require('/home/oizsopkxt...')
+#2 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 115
+[15-Jan-2026 12:46:27 Europe/Chisinau] PHP Warning:  Undefined variable $unconfirmed_id in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 109
+[15-Jan-2026 12:48:32 Europe/Chisinau] PHP Warning:  Undefined variable $unconfirmed_id in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 109
+[15-Jan-2026 12:55:02 Europe/Chisinau] PHP Warning:  Undefined variable $unconfirmed_id in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 109
+[15-Jan-2026 13:03:36 Europe/Chisinau] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:03:36 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:3
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(28): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:05:01 Europe/Chisinau] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:05:01 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:3
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(28): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:06:52 Europe/Chisinau] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:06:52 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:3
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(28): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:06:54 Europe/Chisinau] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:06:54 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:3
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(28): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:07:27 Europe/Chisinau] PHP Warning:  require_once(/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php): Failed to open stream: No such file or directory in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:07:27 Europe/Chisinau] PHP Fatal error:  Uncaught Error: Failed opening required '/home/oizsopkxtv/kubinfo.live/includes/layout/../../db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php:3
+Stack trace:
+#0 /home/oizsopkxtv/kubinfo.live/admin/index.php(28): require()
+#1 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/includes/layout/header.php on line 3
+[15-Jan-2026 13:23:11 Europe/Chisinau] PHP Parse error:  Unclosed '{' on line 5 in /home/oizsopkxtv/kubinfo.live/includes/layout/sidebar.php on line 109
+[15-Jan-2026 13:26:07 Europe/Chisinau] PHP Warning:  Undefined array key "contacts_log" in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[15-Jan-2026 13:26:07 Europe/Chisinau] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/oizsopkxtv/kubinfo.live/admin/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/oizsopkxtv/kubinfo.live/admin/index.php on line 31
+[15-Jan-2026 13:59:16 Europe/Chisinau] PHP Warning:  Undefined variable $isAdmin in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 15
+[15-Jan-2026 13:59:21 Europe/Chisinau] PHP Warning:  Undefined variable $isAdmin in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 15
+[15-Jan-2026 13:59:21 Europe/Chisinau] PHP Warning:  Undefined variable $userId in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 44
+[15-Jan-2026 13:59:21 Europe/Chisinau] PHP Warning:  Undefined variable $userId in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 45
+[15-Jan-2026 13:59:23 Europe/Chisinau] PHP Warning:  Undefined variable $isAdmin in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 15
+[15-Jan-2026 14:00:42 Europe/Chisinau] PHP Warning:  Undefined variable $isAdmin in /home/oizsopkxtv/kubinfo.live/admin/pages/chat.php on line 15

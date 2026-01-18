@@ -4,15 +4,31 @@ require_once __DIR__ . '/../../includes/db.php';
 
 require_auth();
 
+// Получаем запрос
 $q = trim($_GET['q'] ?? '');
-if (mb_strlen($q) < 2) { echo json_encode([]); exit; }
 
+// Если пусто — отдаем пустой массив
+if (mb_strlen($q) < 1) { 
+    echo json_encode([]); 
+    exit; 
+}
+
+// Ищем товары. Важно: добавили p.price и p.brand
 $stmt = $pdo->prepare("
-    SELECT p.name, c.percent 
+    SELECT 
+        p.name, 
+        p.price, 
+        p.brand, 
+        c.percent 
     FROM products p 
-    JOIN salary_categories c ON c.id = p.category_id 
-    WHERE p.name LIKE ? 
-    LIMIT 10
+    LEFT JOIN salary_categories c ON c.id = p.category_id 
+    WHERE p.name LIKE ? OR p.brand LIKE ?
+    LIMIT 15
 ");
-$stmt->execute(['%' . $q . '%']);
-echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
+
+$stmt->execute(['%' . $q . '%', '%' . $q . '%']);
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Отправляем JSON
+header('Content-Type: application/json');
+echo json_encode($results);
